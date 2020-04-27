@@ -28,17 +28,31 @@
     transform: translateX(-100%);
   }
 
-  a {
+  a,
+  p {
     color: var(--black);
     text-decoration: none;
     padding: 10px;
     margin-bottom: 0;
     font-size: 1.3rem;
+    font-weight: var(--text-bold);
     display: block;
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &.active {
       text-decoration: underline;
     }
+
+    &.submenu {
+      font-weight: var(--text-normal);
+      padding-left: 2rem;
+    }
+  }
+
+  p:hover {
+    text-decoration: none;
+    cursor: default;
   }
 }
 
