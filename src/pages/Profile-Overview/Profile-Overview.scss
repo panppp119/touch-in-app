@@ -1,7 +1,6 @@
 
   .text-title {
     margin-left: 20px;
-    display: flex;
 }
 
 .border {
@@ -35,7 +34,12 @@
   color: #FFFFFF;
   display: flex;
   margin-left: 10px;
-  margin-top: 8px;
+  margin-top: 5px;
+}
+
+.title-icon {
+  margin-top: 1px;
+  margin-right: 5px;
 }
 
 .card-detail {
@@ -52,10 +56,13 @@
   word-wrap: break-word;
 }
 
-.card-detail h4 {
+.card-detail p {
   display: flex;
   margin-left: 10px;
   margin-top: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .border-detail {
@@ -64,12 +71,5 @@
   margin-left: 10px;
 }
 
-@media (width:375px) {
-  .title-bar h3 {
-      color: #FFFFFF;
-      display: flex;
-      margin-left: 10px;
-      margin-top: 3px;
-  }
-  
-}
+
+
