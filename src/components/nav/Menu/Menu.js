@@ -9,23 +9,6 @@ import menuItems from 'constants/menuItems'
 import './Menu.scss'
 
 class Menu extends React.Component {
-  state = {
-    menuIndex: null,
-  }
-
-  handleClickMenu = (index) => {
-    if (this.state.menuIndex === index) {
-      this.setState({ menuIndex: null })
-    } else {
-      this.setState({ menuIndex: index })
-    }
-  }
-
-  handleClickMenuLink = () => {
-    this.props.setVisibility()
-    this.setState({ menuIndex: null })
-  }
-
   render() {
     const { visibility, setVisibility, location } = this.props
 
@@ -51,7 +34,7 @@ class Menu extends React.Component {
                   <div
                     className='has-submenu'
                     key={index}
-                    onClick={() => this.handleClickMenu(index)}
+                    onClick={setVisibility}
                   >
                     <p>{menu.name}</p>
 
@@ -80,7 +63,7 @@ class Menu extends React.Component {
                 return (
                   <Link
                     to={menu.path}
-                    onClick={this.handleClickMenuLink}
+                    onClick={setVisibility}
                     key={index}
                     className={classnames({
                       active: location.pathname === menu.path,
@@ -91,7 +74,7 @@ class Menu extends React.Component {
                 )
               }
             })}
-            <Link to='/login' onClick={this.handleClickMenuLink}>
+            <Link to='/login' onClick={setVisibility}>
               ออกจากระบบ
             </Link>
           </div>
