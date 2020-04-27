@@ -63,7 +63,11 @@ class Menu extends React.Component {
                           key={subIndex}
                           className={classnames([
                             'submenu',
-                            { active: location.pathname === sub.path },
+                            {
+                              active: sub.path.includes(
+                                location.pathname.split('/')[2],
+                              ),
+                            },
                           ])}
                         >
                           - {sub.name}
