@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import Container from 'components/layout/Container'
+import menuItems from 'constants/menuItems'
 
 import './Menu.scss'
 
@@ -23,20 +25,26 @@ class Menu extends React.Component {
           </Container>
         </div>
 
-        <div id='flyoutMenu' className={visibility ? 'show' : 'hide'}>
-          <div className='lf'>
-            <h2>
-              <p href='#'>หน้าหลัก</p>
-            </h2>
-            <h2>
-              <p href='#'>โปรไฟล์</p>
-            </h2>
-            <h2>
-              <p href='#'>เช็คอิน</p>
-            </h2>
-            <h2>
-              <p href='#'>ออกจากระบบ</p>
-            </h2>
+        <div id='flyout-menu' className={visibility ? 'show' : 'hide'}>
+          <div className='menu-items'>
+            {menuItems.map((menu, index) => {
+              if (menu.subMenu) {
+                return (
+                  <Link to={menu.path} onClick={setVisibility} key={index}>
+                    {menu.name}
+                  </Link>
+                )
+              } else {
+                return (
+                  <Link to={menu.path} onClick={setVisibility} key={index}>
+                    {menu.name}
+                  </Link>
+                )
+              }
+            })}
+            <Link to='/login' onClick={setVisibility}>
+              ออกจากระบบ
+            </Link>
           </div>
         </div>
       </>
