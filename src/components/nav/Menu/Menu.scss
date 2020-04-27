@@ -1,4 +1,4 @@
-#flyoutMenu {
+#flyout-menu {
   width: 50%;
   height: 100vh;
   background-color: var(--disabled);
@@ -8,7 +8,6 @@
   transition: transform 0.3s ease-in;
   overflow: auto;
   z-index: 1000;
-  padding: 10px;
   outline: none;
 
   &:focus {
@@ -29,9 +28,13 @@
     transform: translateX(-100%);
   }
 
-  h2 a {
-    color: #333;
+  a {
+    color: var(--black);
     text-decoration: none;
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    display: block;
 
     &:hover {
       text-decoration: underline;
