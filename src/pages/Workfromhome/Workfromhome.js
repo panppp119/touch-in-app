@@ -8,7 +8,7 @@ class Workfromhome extends React.Component {
     
     return(
     <div>
-    <h3 className="row">Workfromhome Page</h3>
+    <h3 className="row">Work From Home Page</h3>
     </div>
     ) 
   }
