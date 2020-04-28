@@ -2,7 +2,7 @@ import React from 'react'
 import './Dashboard.scss'
 
 
-var FontAwesome = require('react-fontawesome');
+
 
 class Dashboard extends React.Component {
 
@@ -25,7 +25,7 @@ class Dashboard extends React.Component {
       <h5>ประวัติการเช็คอิน</h5>
       
         <div className="col-2">
-          <FontAwesome name='calendar'  />{this.state.date} 
+         {this.state.date} 
           </div>     
           
       </div>
