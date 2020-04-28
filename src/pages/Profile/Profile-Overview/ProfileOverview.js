@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './ProfileOverview.scss'
+import { BsPeopleCircle , BsFillBriefcaseFill } from "react-icons/bs"
+import { FaProcedures } from "react-icons/fa";
 
 export class ProfileOverview extends Component {
     render() {
@@ -10,7 +12,7 @@ export class ProfileOverview extends Component {
                 </div>
                 <div className="border" />
                 <div className="title-bar">
-                    <h3><div className="title-icon"><i class="fa fa-fw fa-user-circle"></i></div>โปรไฟล์</h3>
+                    <h3><div className="title-icon"><BsPeopleCircle /></div>โปรไฟล์</h3>
                 </div>
                 <div className="card-detail">
                     <p>ชื่อ - นามสกุล</p>
@@ -23,7 +25,7 @@ export class ProfileOverview extends Component {
                 </div>
 
                 <div className="title-bar">
-                    <h3><div className="title-icon"><i class="fa fa-fw fa-briefcase" ></i></div>สถานะการทำงาน</h3>
+                    <h3><div className="title-icon"><BsFillBriefcaseFill /></div>สถานะการทำงาน</h3>
                 </div>
                 <div className="card-detail">
                     <p>ตำแหน่ง</p>
@@ -40,7 +42,7 @@ export class ProfileOverview extends Component {
                 </div>
 
                 <div className="title-bar">
-                    <h3><div className="title-icon"><i class="fa fa-fw fa-bed" ></i></div>สิทธิ์การลา</h3>
+                    <h3><div className="title-icon"><FaProcedures /></div>สิทธิ์การลา</h3>
                 </div>
                 <div className="card-detail">
                     <p>สิทธิ์วันลาพักร้อน</p>
