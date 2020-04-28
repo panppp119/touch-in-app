@@ -5,7 +5,6 @@ import Container from 'components/layout/Container'
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 
 class Login extends React.Component {
-
   state = { isSignedIn: false }
 
   uiConfig = {
