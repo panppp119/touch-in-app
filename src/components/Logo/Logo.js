@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../Image/touch logo.png'
+import Logo from 'Image/touch logo.png'
 import './Logo.scss'
 
 const logo = (props) => (
