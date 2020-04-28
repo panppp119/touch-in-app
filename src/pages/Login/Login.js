@@ -1,14 +1,17 @@
 import React from 'react'
-import Logo from '../../components/Logo/Logo'
-import firebase from '../../config/firebaseConfig'
+import Logo from 'components/Logo/Logo'
+import firebase, {auth} from 'config/firebaseConfig'
+import Container from 'components/layout/Container'
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 
 class Login extends React.Component {
+
   state = { isSignedIn: false }
+
   uiConfig = {
     signInFlow: "popup",
     signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID
+      auth.GoogleAuthProvider.PROVIDER_ID
     ],
     callbacks: {
       signInSuccess: () => false
@@ -23,10 +26,10 @@ class Login extends React.Component {
   }
   render() {
     return  (
-      <div className="container">
+      <Container>
         <Logo />
         <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
-      </div>
+      </Container>
     )
   }
 }
