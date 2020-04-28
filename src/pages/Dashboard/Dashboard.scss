@@ -65,27 +65,26 @@
 
 
 .image{
-    position: absolute;
+
 width: 80px;
 height: 79px;
-left: 30px;
-bottom: 25px;
+margin-left:35px ;
+margin-bottom: -100px;
 }
 .gradient{
-    position: absolute;
 width: 700px;
 height: 130px;
 left: 150px;
-top: 180px;
+margin-top:  30px;
 background: linear-gradient(97.41deg, #F869D5 1.01%, #5650DE 100%);
 border-radius: 12px;
 }
 .gradient2{
-position: absolute;
+
 width: 700px;
 height: 130px;
 left: 150px;
-top: 360px;
+margin-top:  60px;
 background: linear-gradient(97.41deg, #F869D5 1.01%, #5650DE 100%);
 border-radius: 12px;
 }
@@ -93,7 +92,7 @@ border-radius: 12px;
 .work-project{
    color: white;
    margin-left: 150px;
-   margin-top: 20px;
+   margin-top: -10px;
 }
 
 .project{
