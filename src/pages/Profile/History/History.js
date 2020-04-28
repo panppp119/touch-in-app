@@ -13,7 +13,6 @@ class History extends React.Component {
   render() {  
     return(
     <div>
-    <h3 className="row">Dashboard Page</h3>
       <div className="row">
       <h5>ประวัติการเช็คอิน</h5>
         <div className="col-2">
