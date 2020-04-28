@@ -1,7 +1,8 @@
 import React from 'react'
 import './Dashboard.scss'
-
-
+import { Link ,Route,Switch} from 'react-router-dom'
+import Workoutside from '../Workoutside/Workoutside.js'
+import Workfromhome from '../Workfromhome/Workfromhome.js'
 
 
 class Dashboard extends React.Component {
@@ -31,6 +32,8 @@ class Dashboard extends React.Component {
       </div>
       <img  className="search"  src={require('../../img/search-logo.png')} />  
       <div className="border" />
+
+      <Link to="/Workoutside">
       <div className="gradient">
             <img  className="image "  src={require('../../img/workout.png')} />
             <div className="work-project"> ปฏิบัติงานนอกสถานที่ 
@@ -41,6 +44,8 @@ class Dashboard extends React.Component {
             </div>
           
       </div>
+      </Link>
+      <Link to="/Workfromhome">
       <div className="gradient2">
             <img  className="image "  src={require('../../img/workfromhome.png')} />
             <div className="work-project"> Work From Home
@@ -50,8 +55,10 @@ class Dashboard extends React.Component {
             <p>สถานที่ </p>
             </div>
       </div>
-
-
+      </Link>
+ 
+          <Switch>   <Route   path="/Workoutside" component={Workoutside} />
+              <Route  path="/Workfromhome" component={Workfromhome} /></Switch> 
     </div>
     ) 
   }
