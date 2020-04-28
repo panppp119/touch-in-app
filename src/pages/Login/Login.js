@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from 'components/Logo/Logo'
-import firebase, {auth} from 'config/firebaseConfig'
+import firebase, { auth } from 'config/firebaseConfig'
 import Container from 'components/layout/Container'
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 
@@ -24,9 +24,9 @@ class Login extends React.Component {
       console.log("user", user)
     })
   }
-  
+
   render() {
-    return  (
+    return (
       <Container>
         <Logo />
         <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
