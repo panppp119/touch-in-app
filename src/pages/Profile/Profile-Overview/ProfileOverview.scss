@@ -1,18 +1,17 @@
 
-  .text-title {
+.text-title {
+    margin-top: 10px;
     margin-left: 10px;
 }
 
 .border {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 10px;
   border: 1px solid #C4C4C4;
-  position: absolute;
   width: 100%;
 }
 
 .title-bar {
-  position: absolute;
   margin-top: 30px;
   margin-left: 10px;
   width: 100%;
@@ -25,7 +24,7 @@
   color: #FFFFFF;
   display: flex;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 .title-icon {
@@ -37,7 +36,6 @@
   background: #E5E5E5;
   width: 100%;
   margin-left: 10px;
-  margin-top: 60px;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -64,32 +62,23 @@
 
 @media (min-width: 1280px) {
   .border {
-      margin-top: 10px;
-      margin-left: 30px;
+      margin-top: 20px;
+      margin-left: 10px;
       border: 1px solid #C4C4C4;
-      position: absolute;
       width: 95%;
     }
-}
-
-@media (min-width: 1280px) {
-  .title-bar {
-      position: absolute;
+    .title-bar {
       margin-top: 30px;
-      margin-left: 30px;
+      margin-left: 10px;
       width: 95%;
       height: 5%;
       background: #F68B81;
       border-top:  5px solid #F1656C
   }
-}
-
-@media (min-width: 1280px) {
   .card-detail {
       background: #E5E5E5;
       width: 95%;
-      margin-left: 30px;
-      margin-top: 60px;
+      margin-left: 10px;
       position: relative;
       display: -ms-flexbox;
       display: flex;
