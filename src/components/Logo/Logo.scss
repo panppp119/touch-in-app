@@ -5,11 +5,11 @@
 
 }
 
-@media (width:375px) and (height:667px){
+
+@media screen and (min-width: 1280px) {
     .Logo img{
         width: 332px;
         height: 194px;
-        left: 22px;
-        top: 93px;
+        margin-left: 37%;
     }
   }
