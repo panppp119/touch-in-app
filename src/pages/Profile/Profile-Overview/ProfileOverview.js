@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
-import './profile.scss'
+import './ProfileOverview.scss'
 
-export class Profile extends Component {
+export class ProfileOverview extends Component {
     render() {
         return (
             <div>
-                <h4>Menubar</h4>
                 <div className="text-title">
-                    <h2>ข้อมูลผู้ใช้งาน</h2>
+                    <h1>ข้อมูลผู้ใช้งาน</h1>
                 </div>
                 <div className="border" />
                 <div className="title-bar">
                     <h3><div className="title-icon"><i class="fa fa-fw fa-user-circle"></i></div>โปรไฟล์</h3>
-                </div><br />
+                </div>
                 <div className="card-detail">
                     <p>ชื่อ - นามสกุล</p>
                     <div className="border-detail" />
@@ -25,7 +24,7 @@ export class Profile extends Component {
 
                 <div className="title-bar">
                     <h3><div className="title-icon"><i class="fa fa-fw fa-briefcase" ></i></div>สถานะการทำงาน</h3>
-                </div><br />
+                </div>
                 <div className="card-detail">
                     <p>ตำแหน่ง</p>
                     <div className="border-detail" />
@@ -42,7 +41,7 @@ export class Profile extends Component {
 
                 <div className="title-bar">
                     <h3><div className="title-icon"><i class="fa fa-fw fa-bed" ></i></div>สิทธิ์การลา</h3>
-                </div><br />
+                </div>
                 <div className="card-detail">
                     <p>สิทธิ์วันลาพักร้อน</p>
                     <div className="border-detail" />
@@ -55,4 +54,4 @@ export class Profile extends Component {
         )
     }
 }
-export default Profile
+export default ProfileOverview
