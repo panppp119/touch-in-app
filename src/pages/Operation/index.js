@@ -1,3 +1,3 @@
-import Importuser from './Importuser/Importuser'
+import Importuser from './ImportUser/importuser'
 
 export default Importuser
