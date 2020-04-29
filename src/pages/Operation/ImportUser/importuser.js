@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Importuser extends Component {
+class Importuser extends React.Component {
     render() {
         return (
             <div>
