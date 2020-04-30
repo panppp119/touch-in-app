@@ -13,6 +13,27 @@ export class User extends Component {
                     </div>
                 </div>
                 <div className='border' />
+                <div className='row'>
+
+                    <div className='card-detail'>
+                        <p>ชื่อ - สกุล</p>
+                        <p>ตำแหน่ง</p>
+                        <p>แผนก</p>
+                    </div>
+
+                    <div className='card-detail'>
+                        <p>ชื่อ - สกุล</p>
+                        <p>ตำแหน่ง</p>
+                        <p>แผนก</p>
+                    </div>
+
+                    <div className='card-detail'>
+                        <p>ชื่อ - สกุล</p>
+                        <p>ตำแหน่ง</p>
+                        <p>แผนก</p>
+                    </div>
+
+                </div>
             </div>
         )
     }
