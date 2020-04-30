@@ -66,7 +66,6 @@ export class ProfileOverview extends Component {
           <div className='border-detail' />
           <p>สิทธิ์วันลาป่วย</p>
         </div>
-        <br />
       </div>
     )
   }
