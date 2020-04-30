@@ -14,10 +14,10 @@ class projects extends React.Component {
         <img  className="search"  src={require('../../../img/import.png')} />  
         <div className="border" />
   
-        <div className="gradient">
+        <div className="gradient newgradient">
               <img  className="image "  src={require('../../../img/project.png')} />
               
-              <div className="work-project"> ไอดี 0001
+              <div className="work-project newwork-project"> ไอดี 0001
               <p>โปรเจค A</p>
               </div>
               <div className="project"> สถานะการทำงาน : กำลังทำงาน 
@@ -26,9 +26,9 @@ class projects extends React.Component {
         </div>
     
   
-        <div className="gradient2">
+        <div className="gradient2 newgradient">
               <img  className="image "  src={require('../../../img/project.png')} />
-              <div className="work-project"> ไอดี 0002
+              <div className="work-project newwork-project"> ไอดี 0002
               <p>โปรเจค B</p>
               </div>
               <div className="project"> สถานะการทำงาน : กำลังทำงาน
@@ -36,9 +36,9 @@ class projects extends React.Component {
               </div>
         </div>
 
-        <div className="gradient2">
+        <div className="gradient2 newgradient">
               <img  className="image "  src={require('../../../img/project.png')} />
-              <div className="work-project"> ไอดี 0003
+              <div className="work-project newwork-project"> ไอดี 0003
               <p>โปรเจค C</p>
               </div>
               <div className="project"> สถานะการทำงาน : กำลังทำงาน
