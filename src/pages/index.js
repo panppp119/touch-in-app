@@ -5,14 +5,14 @@ import CoreLayout from 'components/layout/CoreLayout'
 import Dashboard from 'pages/Dashboard'
 import Login from 'pages/Login'
 import NoMatch from 'pages/NoMatch'
-import User from 'pages/Operation'
+import Users from 'pages/Operation Tools/Users'
 
 
 
 const routes = (
   <CoreLayout>
     <Switch>
-      <Route exact path='/operation_tools/' component={User}/>
+      <Route exact path='/operation_tools' component={Users} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/' component={Dashboard} />
       <Route component={NoMatch} />
