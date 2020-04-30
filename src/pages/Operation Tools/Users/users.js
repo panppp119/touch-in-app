@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './users.scss'
 import { BsPlusCircleFill } from "react-icons/bs";
+import { Link } from 'react-router-dom'
 
 export class Users extends Component {
     render() {
@@ -15,11 +16,13 @@ export class Users extends Component {
                 <div className='border' />
                 <div className='row'>
 
-                    <div className='card-detail'>
-                        <p>ชื่อ - สกุล</p>
-                        <p>ตำแหน่ง</p>
-                        <p>แผนก</p>
-                    </div>
+                    <Link to='/User Detail'>
+                        <div className='card-detail'>
+                            <p>ชื่อ - สกุล</p>
+                            <p>ตำแหน่ง</p>
+                            <p>แผนก</p>
+                        </div>
+                    </Link>
 
                     <div className='card-detail'>
                         <p>ชื่อ - สกุล</p>
@@ -33,6 +36,12 @@ export class Users extends Component {
                         <p>แผนก</p>
                     </div>
 
+                    <div className='card-detail'>
+                        <p>ชื่อ - สกุล</p>
+                        <p>ตำแหน่ง</p>
+                        <p>แผนก</p>
+                    </div>
+                    
                 </div>
             </div>
         )
