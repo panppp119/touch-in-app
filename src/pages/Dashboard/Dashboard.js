@@ -4,7 +4,7 @@ import './Dashboard.scss'
 
 class Dashboard extends React.Component {
   render() {
-    return <h1>Dashboard Page</h1>
+    return <h1>หน้าหลัก</h1>
   }
 }
 
