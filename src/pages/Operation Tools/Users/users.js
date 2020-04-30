@@ -5,7 +5,7 @@ import { BsPlusCircleFill } from "react-icons/bs";
 export class Users extends Component {
     render() {
         return (
-            <div className='User-Import'>
+            <div className='user-import'>
                 <div className='text-title'>
                     <h2>ผู้ใช้</h2>
                     <div className='icon'>
