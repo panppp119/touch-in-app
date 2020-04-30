@@ -7,10 +7,12 @@ import NoMatch from 'pages/NoMatch'
 import Workoutside from './Workoutside/Workoutside'
 import Workfromhome from './Workfromhome//Workfromhome'
 import History from 'pages/Profile/History'
+import project from 'pages/Operation Tools/Projects/projects'
 
 const routes = (
   <CoreLayout>
     <Switch>
+      <Route path='/operation_tools/projects' component={project} />
       <Route path='/profile/history' component={History} />
       <Route path="/Workoutside" component={Workoutside} />
       <Route path="/Workfromhome" component={Workfromhome} />
