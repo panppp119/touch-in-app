@@ -9,9 +9,21 @@ const ContainerComp = styles.div`
   padding: 0;
   position: relative;
 
+  div:first-child {
+    margin-top: 47px;
+
+    @media screen and (min-width: 1024px) {
+      margin-top: 57px;
+    }
+  }
+
   @media screen and (min-width: 1024px) {
     max-width: 1024px;
-    padding-left: ${(props) => (props.showMenu ? '20%' : '10px')};
+    padding-left: ${(props) => (props.showMenu ? '250px' : '10px')};
+  }
+
+  @media screen and (min-width: 1980px) {
+    padding-left: 0;
   }
 `
 
