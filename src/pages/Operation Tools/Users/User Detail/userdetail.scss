@@ -1,0 +1,97 @@
+.user-detail {
+    .text-title {
+        margin-left: 10px;
+    }
+  
+    .border {
+      margin-top: 10px;
+      margin-left: 10px;
+      border: 1px solid #C4C4C4;
+      position: absolute;
+      width: 100%;
+    }
+  
+    .title-bar {
+      position: absolute;
+      margin-top: 30px;
+      margin-left: 10px;
+      width: 100%;
+      height: 5%;
+      background: #F68B81;
+      border-top:  5px solid #F1656C
+  }
+  
+  .title-bar h3 {
+      color: #FFFFFF;
+      display: flex;
+      margin-left: 10px;
+      margin-top: 5px;
+  }
+  
+  .title-icon {
+      margin-top: 1px;
+      margin-right: 5px;
+  }
+  
+  .card-detail {
+      background: #E5E5E5;
+      width: 100%;
+      margin-left: 10px;
+      margin-top: 60px;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+  }
+  
+  .card-detail p {
+      display: flex;
+      margin-left: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: normal;
+  }
+  
+  .border-detail {
+      border: 1px solid #FFFFFF;
+      width: 95%;
+      margin-left: 10px;
+  }
+  
+  @media (min-width: 1280px) {
+      .border {
+          margin-top: 10px;
+          margin-left: 10px;
+          border: 1px solid #C4C4C4;
+          position: absolute;
+          width: 95%;
+        }
+        .title-bar {
+          position: absolute;
+          margin-top: 30px;
+          margin-left: 10px;
+          width: 95%;
+          height: 5%;
+          background: #F68B81;
+          border-top:  5px solid #F1656C
+      }
+      
+      .card-detail {
+          background: #E5E5E5;
+          width: 95%;
+          margin-left: 10px;
+          margin-top: 60px;
+          position: relative;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          min-width: 0;
+          word-wrap: break-word;
+      }
+  }
+}
