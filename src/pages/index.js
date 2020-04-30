@@ -12,7 +12,7 @@ import User from 'pages/Operation'
 const routes = (
   <CoreLayout>
     <Switch>
-      <Route exact path='operation' component={User}/>
+      <Route exact path='/operation_tools/' component={User}/>
       <Route exact path='/login' component={Login} />
       <Route exact path='/' component={Dashboard} />
       <Route component={NoMatch} />
