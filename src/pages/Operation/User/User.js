@@ -5,12 +5,12 @@ export class User extends Component {
   render() {
     return (
       <div>
-         <div className='text-title'>
-                        <h2>ผู้ใช้</h2>
-                        <div className='icon'>
-                            <BsPlusCircleFill />
-                        </div>
-                    </div>
+        <div className='text-title'>
+          <h2>ผู้ใช้</h2>
+          <div className='icon'>
+            <BsPlusCircleFill />
+          </div>
+        </div>
       </div>
     )
   }
