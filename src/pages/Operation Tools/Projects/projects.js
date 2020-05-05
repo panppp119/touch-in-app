@@ -1,7 +1,41 @@
 import React from 'react'
 import './projects.scss'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
+import axios from 'axios'
+//import * as XLSX from 'xlsx';
+
 class projects extends React.Component {
+  
+  state = {
+    file: null
+  }
+
+
+  handleFile(e){
+    let file = e.target.files
+    this.setState({file:file})
+  }
+  handleUpload(e){
+    let file = this.state.file
+    let formdata = new FormData()
+    
+    formdata.append('xlsx',file)
+
+
+    axios({
+      url: `/some/api`,
+      method: "POST",
+      headers:{
+        authorization: `your token`
+      },
+      data: formdata
+    }).then((res)=>{
+
+    },(err)=>{
+      
+    })
+  }
+
   render() {
     return(
         <div>
@@ -11,7 +45,15 @@ class projects extends React.Component {
           
             </div>           
         </div>
-        <img  className="search"  src={require('../../../img/import.png')} />  
+        <form>
+          <div className="row">
+       <input className="col-3 inputfile" type="file" name="file" onChange={(e)=> 
+        this.handleFile(e)}/>
+        
+       &nbsp; <button className="upload" type="button" onClick={(e)=>
+        this.handleUpload}>Upload</button>
+        </div>
+        </form>
         <div className="border" />
   
         <div className="gradient newgradient">
@@ -51,6 +93,7 @@ class projects extends React.Component {
     )
   }
 }
+
 projects.defaultProps = {}
 projects.propTypes = {}
 export default projects
