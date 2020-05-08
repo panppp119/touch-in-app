@@ -18,7 +18,7 @@ class Workfromhome extends React.Component {
       <h3 className="row">Work From Home Page</h3>
       <div className="row">
         <h5>ประวัติการเช็คอิน</h5>
-          <div className="col-2">
+          <div className="col-4">
            {this.state.date} 
             </div>           
         </div>
@@ -39,7 +39,7 @@ class Workfromhome extends React.Component {
           โปรเจ็ค A
         </div>
         </div>
-        <div className="workoutdetail">
+        <div className="workoutdetail2">
      
           สถานที่ 
           <div className="linedetail"/>
