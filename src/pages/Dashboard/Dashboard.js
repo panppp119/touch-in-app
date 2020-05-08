@@ -6,7 +6,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-      <h3 className="row">หน้าหลัก</h3>
+      <h3 className="row">&nbsp;หน้าหลัก</h3>
       <div className="row">
     
           <div className="col-2">
@@ -44,7 +44,7 @@ class Dashboard extends React.Component {
           Work From Home
         </div>
         <div className="fontmenu2">
-          Work From Outside
+          Work Outside
         </div>
         <div className="fontmenu3">
           กฏการเบิก
