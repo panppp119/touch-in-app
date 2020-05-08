@@ -18,7 +18,7 @@ class Workoutside extends React.Component {
     <h3 className="row">Workoutside Page</h3>
     <div className="row">
       <h5>ประวัติการเช็คอิน</h5>
-        <div className="col-2">
+        <div className="col-4">
          {this.state.date} 
           </div>           
       </div>
@@ -26,7 +26,7 @@ class Workoutside extends React.Component {
       <div className="border" />
 
       <div className="sumgroup">
-        
+       
       <div className="group">
         <div className="group2"/>
         <div className="font">
