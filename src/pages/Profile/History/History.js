@@ -15,7 +15,7 @@ class History extends React.Component {
     <div>
       <div className="row">
       <h5>ประวัติการเช็คอิน</h5>
-        <div className="col-2">
+        <div className="col-4">
          {this.state.date} 
           </div>           
       </div>
