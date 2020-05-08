@@ -1,11 +1,21 @@
 .group{
-width: 900px;
+width: 250px;
 height: 23px;
 margin-top: 20px;
-margin-left: 45px;
+margin-left: 35px;
 background: #F68B81;
 border: 1px solid black;
 }
+@media (min-width: 1280px) {
+    .group {
+        width: 900px;
+        height: 23px;
+        margin-top: 20px;
+        margin-left: 45px;
+        background: #F68B81;
+        border: 1px solid black;
+      }
+  }
 .group2{
 display:block;
 width:22px;
@@ -23,19 +33,30 @@ font-weight:bold;
 margin-left: 5px;
 border: 1px solid black;
 }
+
 .font{
     color: white;
     margin-left: 35px;
     margin-top: -22px;
 }
 .projectgroup{
-width: 900px;
+width: 250px;
 height: 23px;
 margin-top: 20px;
-margin-left: 45px;
+margin-left: 35px;
 background: #E5E5E5;
 border: 1px solid black;
 }
+@media (min-width: 1280px) {
+    .projectgroup {
+        width: 900px;
+        height: 23px;
+        margin-top: 20px;
+        margin-left: 45px;
+        background: #E5E5E5;
+        border: 1px solid black;
+      }
+  }
 .projectgroup2{
     display:block;
     width:22px;
@@ -60,14 +81,24 @@ border: 1px solid black;
         
     }
     .workoutdetail{
-        width: 900px;
-        height: 500px;
+        width: 300px;
+        height: 300px;
         margin-top: 20px;
-        margin-left: 45px;
+        margin-left: 35px;
         background: #E5E5E5;
         border-radius: 10px;
       
     }
+    @media (min-width: 1280px) {
+        .workoutdetail {
+            width: 900px;
+            height: 500px;
+            margin-top: 20px;
+            margin-left: 45px;
+            background: #E5E5E5;
+            border-radius: 10px;
+          }
+      }
     .borderdetail{
         width: 900px;
         height: 2px;
@@ -88,29 +119,64 @@ border: 1px solid black;
         width: 100%;
     }
     .card1{
-        width: 180px;
-        height: 150px;
-        margin-left: 100px;
-        margin-top: 50px;
+        width: 80px;
+        height: 50px;
+        margin-left: 10px;
+        margin-top: 30px;
         background: #FFFFFF;
     }
+    @media (min-width: 1280px) {
+        .card1 {
+            width: 180px;
+            height: 150px;
+            margin-left: 100px;
+            margin-top: 50px;
+            background: #FFFFFF;
+          }
+      }
     .card2{
-        width: 180px;
-        height: 150px;
-        margin-left: 350px;
-        margin-top: -150px;
+        width: 80px;
+        height: 50px;
+        margin-left: 105px;
+        margin-top: -50px;
         background: #FFFFFF;
     }
+    @media (min-width: 1280px) {
+        .card2{
+            width: 180px;
+            height: 150px;
+            margin-left: 350px;
+            margin-top: -150px;
+            background: #FFFFFF;
+          }
+      }
     .card3{
-        width: 180px;
-        height: 150px;
-        margin-left: 600px;
-        margin-top: -150px;
+        width: 80px;
+        height: 50px;
+        margin-left: 200px;
+        margin-top: -50px;
         background: #FFFFFF;
     }
+    @media (min-width: 1280px) {
+        .card3{
+            width: 180px;
+            height: 150px;
+            margin-left: 600px;
+            margin-top: -150px;
+            background: #FFFFFF;
+          }
+      }
     .sumgroup{
         border: 1px solid black;
-        width: 1000px;
-        height: 1250px;
+        width: 370px;
+        height: 850px;
         margin-top:40px ;
     }
+    @media (min-width: 1280px) {
+        .sumgroup {
+            border: 1px solid black;
+            width: 1000px;
+            height: 1250px;
+            margin-top:40px ;
+          }
+      }
