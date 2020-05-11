@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import moment from 'moment'
 
 import CheckInCard from 'components/card/CheckInCard'
