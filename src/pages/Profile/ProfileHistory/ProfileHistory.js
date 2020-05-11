@@ -13,6 +13,7 @@ class ProfileHistory extends React.Component {
   render() {
     return (
       <div className='profile-history'>
+      
         <div className='header'>
           <h5>ประวัติการเช็คอิน</h5>
           <div className='col-4'>{this.state.date}</div>
@@ -27,7 +28,7 @@ class ProfileHistory extends React.Component {
           />
 
           <CheckInCard
-            imgSrc={require('../../../img/workout.png')}
+            imgSrc={require('../../../img/workfromhome.png')}
             checkinType=' Work From Home'
             projName='โปรเจค B'
             path='/Workfromhome'
