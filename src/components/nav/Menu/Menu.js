@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import classnames from 'classnames'
+import { FiMenu } from 'react-icons/fi'
 
 import Container from 'components/layout/Container'
 import menuItems from 'constants/menuItems'
@@ -16,13 +17,7 @@ class Menu extends React.Component {
       <>
         <div className='menubar'>
           <Container>
-            <span id='roundButton' onClick={setVisibility}>
-              <svg width='30' height='30'>
-                <path d='M0,5 30,5' stroke='#fff' strokeWidth='5' />
-                <path d='M0,14 30,14' stroke='#fff' strokeWidth='5' />
-                <path d='M0,23 30,23' stroke='#fff' strokeWidth='5' />
-              </svg>
-            </span>
+            <FiMenu onClick={setVisibility} />
           </Container>
         </div>
 
