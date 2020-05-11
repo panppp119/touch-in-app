@@ -9,11 +9,13 @@ import Workfromhome from './Workfromhome//Workfromhome'
 import History from 'pages/Profile/History'
 import project from 'pages/Operation Tools/Projects/projects'
 import checkIn from 'pages/Check-In/checkIn'
+import Form from './Check-In/CheckIn-Type/form'
 
 const routes = (
   <CoreLayout>
     <Switch>
-    <Route path='/checkin/form' component={checkIn} />
+      <Route path="/Workfromhome_type" component={Form} />  
+      <Route path='/checkin/form' component={checkIn} />
       <Route path='/operation_tools/projects' component={project} />
       <Route path='/profile/history' component={History} />
       <Route path="/Workoutside" component={Workoutside} />
