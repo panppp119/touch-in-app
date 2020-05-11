@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 import './ProfileOverview.scss'
 import { BsPeopleCircle, BsFillBriefcaseFill } from 'react-icons/bs'
 import { FaProcedures } from 'react-icons/fa'
@@ -72,3 +72,4 @@ export class ProfileOverview extends Component {
 }
 
 export default ProfileOverview
+*/

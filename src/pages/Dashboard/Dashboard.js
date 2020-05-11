@@ -13,6 +13,7 @@ class Dashboard extends React.Component {
           <div className='font'>เมนูลัด</div>
         </div>
         <br />
+
         <div className='menu' />
         <div className='menu2' />
         <div className='menu3' />
@@ -22,6 +23,7 @@ class Dashboard extends React.Component {
 
         <br />
         <br />
+
         <div className='menu' />
         <div className='menu2' />
         <div className='menu3' />
@@ -40,6 +42,7 @@ class Dashboard extends React.Component {
         </div>
         <br />
         <br />
+
         <div className='group'>
           <div className='group2' />
           <div className='font'>เช็คอินล่าสุด</div>
@@ -47,6 +50,7 @@ class Dashboard extends React.Component {
 
         <div className='checkin' />
         <br />
+
         <div className='checkin' />
         <br />
       </div>
