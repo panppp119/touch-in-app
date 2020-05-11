@@ -8,6 +8,8 @@ import NoMatch from 'pages/NoMatch'
 import Workoutside from './Workoutside/Workoutside'
 import Workfromhome from './Workfromhome//Workfromhome'
 import Profile from 'pages/Profile'
+import Report from 'pages/Report'
+import CheckIn from 'pages/CheckIn'
 
 const routes = (
   <CoreLayout>
@@ -18,6 +20,8 @@ const routes = (
 
       <Route exact path='/' component={Dashboard} />
       <Route path='/profile' component={Profile} />
+      <Route path='/checkin' component={CheckIn} />
+      <Route path='/report' component={Report} />
 
       <Route component={NoMatch} />
     </Switch>
