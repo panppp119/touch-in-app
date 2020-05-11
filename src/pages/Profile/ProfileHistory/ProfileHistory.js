@@ -19,14 +19,14 @@ class ProfileHistory extends React.Component {
 
         <div className='history-list'>
           <CheckInCard
-            imgSrc={require('../../../img/workout.png')}
+            imgSrc={require('../../../images/workout.png')}
             checkinType='ปฏิบัติงานนอกสถานที่'
             projName='โปรเจค A'
             path='/Workoutside'
           />
 
           <CheckInCard
-            imgSrc={require('../../../img/workout.png')}
+            imgSrc={require('../../../images/workfromhome.png')}
             checkinType=' Work From Home'
             projName='โปรเจค B'
             path='/Workfromhome'
