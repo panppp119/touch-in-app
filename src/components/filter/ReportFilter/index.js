@@ -6,9 +6,11 @@ const Filter = styles.div`
   justify-content: space-between;
   margin-bottom: 10px;
   align-items: center;
+  display: none;
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 20px;
+    display: flex;
   }
 
   .form-group {
