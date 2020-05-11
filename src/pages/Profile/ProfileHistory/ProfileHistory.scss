@@ -1,0 +1,29 @@
+.profile-history {
+  padding: 20px 0;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 70px;
+  }
+
+  >div.header {
+    border-bottom: 1px solid var(--black);
+    margin: 0 !important;
+  }
+
+  .history-list {
+    margin-top: 10px;
+
+    a {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width) {
+      margin-top: 20px;
+
+      a {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
