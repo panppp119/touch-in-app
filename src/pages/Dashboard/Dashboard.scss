@@ -270,7 +270,7 @@ border: 1px solid black;
        
         }
         @media (min-width: 1280px) {
-            .menuite2{
+            .menuitem2{
                 width:40px;
                 height:40px;
                 line-height:20px;
@@ -305,7 +305,7 @@ border: 1px solid black;
            
             }
             @media (min-width: 1280px) {
-                .menuite3{
+                .menuitem3{
                     width:40px;
             height:40px;
             line-height:20px;
@@ -330,10 +330,23 @@ border: 1px solid black;
 }
 @media (min-width: 1280px) {
     .fontmenu{
-        width:40px;
-        color: white;
+        color: black;
         margin-left: 288px;
         margin-top: -115px;
+        font-size: 14px;
+      }
+  }
+  .fontmenu1{
+    color: black;
+    margin-left: 2px;
+    margin-top: -95px;
+    font-size: 12px;
+}
+@media (min-width: 1280px) {
+    .fontmenu1{
+        color: black;
+        margin-left: 288px;
+        margin-top: -100px;
         font-size: 14px;
       }
   }
@@ -346,12 +359,28 @@ border: 1px solid black;
 }
 @media (min-width: 1280px) {
     .fontmenu2{
-        color: white;
+        color: black;
         margin-left: 455px;
         margin-top: -22px;
         font-size: 14px;
       }
   }
+    
+.fontmenu5{
+    color: black;
+    margin-left: 133px;
+    margin-top: -18px;
+    font-size: 12px;
+}
+@media (min-width: 1280px) {
+    .fontmenu5{
+        color: black;
+        margin-left: 470px;
+        margin-top: -22px;
+        font-size: 14px;
+      }
+  }
+
   
 .fontmenu3{
     color: black;
@@ -361,7 +390,7 @@ border: 1px solid black;
 }
 @media (min-width: 1280px) {
     .fontmenu3{
-        color: white;
+        color: black;
         margin-left: 655px;
         margin-top: -22px;
         font-size: 14px;
@@ -374,23 +403,67 @@ border: 1px solid black;
 }
 
 .checkin{
-width: 760px;
+width: 350px;
 height: 300px;
-margin-left: 115px;
+margin-left: 5px;
 margin-top: 20px;
-
 background: #E5E5E5;
 border-radius: 9px;
 }
+@media (min-width: 1280px) {
+    .checkin{
+        width: 760px;
+        height: 300px;
+        margin-left: 115px;
+        margin-top: 20px;
 
+background: #E5E5E5;
+border-radius: 9px;
+    }
+  }
 .position{
-    padding-left: 20px;
+    padding-left: 17px;
+    margin-top:-135px;
 }
+@media (min-width: 1280px) {
+    .position{
+        padding-left: 20px;
+        margin-top:-115px;
+    }
+  }
+.position3{
+    padding-left: 0px;
+    margin-top:-18px;
+}
+@media (min-width: 1280px) {
+    .position3{
+        padding-left: 20px;
+    }
+  }
+.position2{
+    padding-left: 0px;
+    margin-top:100px;
+}
+@media (min-width: 1280px) {
+    .position2{
+        padding-left: 20px;
+    }
+  }
+
 
 
 .fontmenu4{
-    color: white;
-    margin-left: 640px;
-    margin-top: -22px;
-    font-size: 14px;
+    color: black;
+    margin-left: 245px;
+    margin-top: -17px;
+    font-size: 12px;
 }
+@media (min-width: 1280px) {
+    .fontmenu4{
+        color: black;
+        margin-left: 618px;
+        margin-top: -22px;
+        font-size: 14px;
+    }
+  }
+  
