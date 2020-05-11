@@ -43,7 +43,7 @@ class Dashboard extends React.Component {
         <div className="fontmenu">
           Work From Home
         </div>
-        <div className="fontmenu2">
+        <div className="fontmenu5">
           Work Outside
         </div>
         <div className="fontmenu3">
@@ -51,10 +51,10 @@ class Dashboard extends React.Component {
         </div>
       
       <div className="positionfont">
-        <div className="fontmenu position">
+        <div className="fontmenu1 position">
           Import User
         </div>
-        <div className="fontmenu2 position">
+        <div className="fontmenu2 position3">
         Import Project
         </div>
         <div className="fontmenu4 position2">
