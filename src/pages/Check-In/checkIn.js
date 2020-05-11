@@ -28,19 +28,22 @@ class checkIn extends React.Component {
      
       <div className="border" />
       <br/>
+      <Link to="/Workfromhome_type">
       <div className="workfromhome1">
       <img  className="home"  src={require('../../img/home.png')} />
       <div className="d1">
         <h3>Work From Home</h3>
       </div>
       </div>
+      </Link>
+      <Link>
       <div className="workfromhome2">
       <img  className="workout"  src={require('../../img/workout.png')} />
       <div className="d2">
         <h3>Work Outside</h3>
       </div>
       </div>
-
+      </Link>
     
 
     </div>
