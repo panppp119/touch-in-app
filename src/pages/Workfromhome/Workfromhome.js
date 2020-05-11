@@ -26,29 +26,29 @@ class Workfromhome extends React.Component {
         </div>
 
         <div className='sumgroup2'>
-          <div className='group'>
-            <div className='group2' />
-            <div className='font'>Work From Home</div>
+          <div className='group5'>
+            <div className='group6' />
+            <div className='font2'>Work From Home</div>
           </div>
-          <div className='projectgroup'>
-            <div className='projectgroup2' />
-            <div className='fontproject'>โปรเจ็ค A</div>
+          <div className='projectgroup3'>
+            <div className='projectgroup4' />
+            <div className='fontproject2'>โปรเจ็ค A</div>
           </div>
-          <div className='workoutdetail2'>
+          <div className='workoutdetail3'>
             สถานที่
-            <div className='linedetail' />
+            <div className='linedetail2' />
             ตำบล
-            <div className='linedetail' />
+            <div className='linedetail2' />
             อำเภอ
-            <div className='linedetail' />
+            <div className='linedetail2' />
             จังหวัด
-            <div className='linedetail' />
+            <div className='linedetail2' />
             เวลา
-            <div className='linedetail' />
+            <div className='linedetail2' />
             วันที่
-            <div className='linedetail' />
+            <div className='linedetail2' />
             พิกัด
-            <div className='linedetail' />
+            <div className='linedetail2' />
             <div className='workcard' />
           </div>
         </div>
