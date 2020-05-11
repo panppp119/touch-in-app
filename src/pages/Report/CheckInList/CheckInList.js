@@ -1,23 +1,19 @@
 import React from 'react'
-import moment from 'moment'
 
 import CheckInCard from 'components/card/CheckInCard'
-import './ProfileHistory.scss'
+import ReportFilter from 'components/filter/ReportFilter'
 
-class ProfileHistory extends React.Component {
-  state = {
-    date: moment().format('YYYY-MM-DD'),
-  }
+import './CheckInList.scss'
 
+class CheckInList extends React.Component {
   render() {
     return (
-      <div className='profile-history'>
-        <div className='header'>
-          <h5>ประวัติการเช็คอิน</h5>
-          <div className='col-4'>{this.state.date}</div>
-        </div>
+      <div className='checkin-report'>
+        <h2>Check-In Report</h2>
 
-        <div className='history-list'>
+        <ReportFilter />
+
+        <div className='checkin-list'>
           <CheckInCard
             imgSrc={require('../../../images/workout.png')}
             checkinType='ปฏิบัติงานนอกสถานที่'
@@ -37,7 +33,4 @@ class ProfileHistory extends React.Component {
   }
 }
 
-ProfileHistory.defaultProps = {}
-ProfileHistory.propTypes = {}
-
-export default ProfileHistory
+export default CheckInList
