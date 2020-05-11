@@ -1,0 +1,56 @@
+.work-from-home {
+  padding: 20px 0;
+  padding-top: 10px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 20px;
+  }
+
+  .sumgroup2 {
+    border: 1px solid black;
+    width: 350px;
+    height: 450px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    .sumgroup2 {
+      width: 1000px;
+      height: 650px;
+    }
+  }
+
+  .workcard {
+    width: 120px;
+    height: 90px;
+    margin-left: 95px;
+    margin-top: 10px;
+    background: #FFFFFF;
+  }
+
+  @media (min-width: 1280px) {
+    .workcard {
+      height: 200px;
+      margin-left: 330px;
+      margin-top: 50px;
+    }
+  }
+
+  .workoutdetail2 {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 25px;
+    background: #E5E5E5;
+    border-radius: 10px;
+
+  }
+
+  @media (min-width: 1280px) {
+    .workoutdetail2 {
+      width: 900px;
+      height: 500px;
+      margin-left: 45px;
+    }
+  }
+}

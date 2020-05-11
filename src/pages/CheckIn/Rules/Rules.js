@@ -1,8 +1,14 @@
 import React from 'react'
 
+import './Rules.scss'
+
 class Rules extends React.Component {
   render() {
-    return <h1>Rules Page</h1>
+    return (
+      <div className='rules'>
+        <h1>Rules Page</h1>
+      </div>
+    )
   }
 }
 
