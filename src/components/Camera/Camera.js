@@ -37,7 +37,7 @@ export class Camera extends Component {
             <Container>
                 <div className="form-checkin">
            
-                    <div className="Hide">
+                    <div hidden="hidden">
                         <video ref={ref => (this.videoPlayer = ref)} width="50" heigh="50" />
                     </div>
                      
