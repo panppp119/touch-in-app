@@ -11,7 +11,11 @@ const ContainerComp = styles.div`
 
   @media screen and (min-width: 1024px) {
     max-width: 1024px;
-    padding-left: ${(props) => (props.showMenu ? '20%' : '10px')};
+    padding-left: ${(props) => (props.showMenu ? '250px' : '10px')};
+  }
+
+  @media screen and (min-width: 1980px) {
+    padding-left: 0;
   }
 `
 
