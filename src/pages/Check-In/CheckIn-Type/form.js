@@ -23,24 +23,23 @@ export class Form extends Component {
                   <h2>Work From Home</h2>
               </div>
               <div className='card-icon'>
+
+              <div className='icon'>
+                      <Camera sendFile={uploadImage} />
+                  </div>
+                  
                   <div className='icon'>
                       <UploadImage/>
                   </div>
 
-                  <div className='icon'>
-                      <Camera sendFile={uploadImage} />
-                  </div>
+ 
 
                   <div className='icon'>
                       <BsGeoAlt />
                   </div>
               </div>
-              <button type="button" className='btn btn-danger'>ลบ</button>
-              <div className="card-detail">
-                  <p>เวลา </p>
-                  <div className="border-detail" />
-                  <p>สถานที่ </p>
-              </div>
+             
+
               <button type="button" className='btn btn-danger'>ยกเลิก</button>
               <button type="button" className='btn btn-success'>บันทึก</button>
               <button type="button" className='btn btn-primary'>รายละเอียด</button>
