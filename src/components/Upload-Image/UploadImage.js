@@ -5,6 +5,10 @@ import '../../pages/Check-In/CheckIn-Type/form'
 import '../api/map.css';
 import { longdo, map, LongdoMap } from '../api/LongdoMap';
 import moment from 'moment'
+import './UploadImage.scss'
+
+/*const upload_img = document.getElementById("upload");
+const push_img = document.getElementById("push");*/
 
 export class UploadImage extends Component {
     constructor () {
@@ -18,12 +22,13 @@ export class UploadImage extends Component {
         }
         
       }
-
+     
 
       initMap(){
         map.Layers.setBase(longdo.Layers.GRAY);
       }
     
+      
       async handleUpload (e) {
         const images = this.state.images
         const filesUpload = e.target.files
@@ -33,6 +38,7 @@ export class UploadImage extends Component {
             let reader = new FileReader()
               reader.readAsDataURL(filesUpload[key])
               reader.onload = () => {
+    
                 let dataURI = reader.result
                 let base64 = dataURI.replace(/^[^,]+,/, '')
                 let byteCharacters = atob(base64)
@@ -40,6 +46,7 @@ export class UploadImage extends Component {
                 for (var i = 0; i < byteCharacters.length; i++) {
                   byteNumbers[i] = byteCharacters.charCodeAt(i)
                 }
+
                 let blob = new Blob([byteNumbers], { type: 'image/jpeg'
               })
               let urlCreator = window.URL || window.webkitURL
@@ -53,7 +60,11 @@ export class UploadImage extends Component {
           })
         })
         const data = await Promise.all(allImages)
-        this.setState({ images: images.concat(data) })
+        
+        this.setState({ 
+          images: images.concat(data) 
+          
+        })
       }
       componentWillMount(){
       
@@ -73,11 +84,22 @@ export class UploadImage extends Component {
         if (this.state.images.length > 0) {
           return this.state.images.map((image, index) => {
             return (
-              
-              <div key={image.url}>
-                <img src={image.url} width={200} />
+              <div>
+              <div key={image.url} className="">
+                <img className="UploadImage" src={image.url} width={200} />
                 <br/>
-                <button
+
+              
+
+
+                {/* <div className='map'>
+                  <LongdoMap  id="longdo-map "mapKey={mapKey} callback={this.initMap} />
+                  </div> 
+                */}
+                
+              </div>
+             
+              <button type="button" className='btn-delete btn-danger-delete'
                   onClick={() => {
                     images.splice(index, 1)
                     this.setState({images})
@@ -85,9 +107,13 @@ export class UploadImage extends Component {
                 >
                   ลบ
                 </button>
-                <h5>{moment(this.state.timestamp).format('DD/MM/YYYY, HH:mm')}</h5>
-                <div className='map'>
-                <LongdoMap  id="longdo-map"mapKey={mapKey} callback={this.initMap} /></div>
+
+                <div className="card-detail">
+                  <p>เวลา : {moment(this.state.timestamp).format('DD/MM/YYYY, HH:mm')}</p>
+                  <div className="border-detail" />
+                  <p>สถานที่ </p>
+              </div>
+              
               </div>
             )
           })
@@ -130,9 +156,23 @@ export class UploadImage extends Component {
             <Container>
                 <div className="form-checkin">
            
-       
-                    <BsDownload  onClick={''}>UploadImage</BsDownload>
+                <input
+                id='upload'
+                type='file'
+                name='uploadAwsS3'
+                onChange={this.handleUpload.bind(this)}
+                accept='image/*'
+                value={this.state.value}
+                multiple
+                />
+
+              <div className="row"> 
+              <div id='showPreviewUpload' className="img-size">
+                {this.renderImages()}
+              </div>
+              </div>  
                    
+          
                 </div>
             </Container>
         );
