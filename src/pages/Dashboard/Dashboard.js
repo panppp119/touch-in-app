@@ -3,7 +3,7 @@ import './Dashboard.scss'
 class Dashboard extends React.Component {
   render() {
     return (
-      <div>
+      <div className='dashboard'>
         <h3 className='row'>หน้าหลัก</h3>
         <div className='group'>
           <div className='group2' />
