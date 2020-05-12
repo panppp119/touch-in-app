@@ -4,8 +4,23 @@ import Container from 'components/layout/Container'
 import '../../pages/Check-In/CheckIn-Type/form'
 import './Camera.scss'
 export class Camera extends Component {
+    constructor(props){
+        super(props)
+        this.state = ({
 
+          showMain:true,
+          showSub:false,
 
+       
+        })
+      }
+      Main = (e) =>{
+        e.preventDefault()
+        this.setState({
+          showMain:true,
+          showSub:false
+        })
+      }
     processDevices(devices) {
         devices.forEach(device => {
             console.log(device.label);
@@ -42,8 +57,8 @@ export class Camera extends Component {
                     </div>
                      
                     <BsCamera onClick={this.takePhoto}>Take photo!</BsCamera>
-                    <div >
-                        <canvas ref={ref => (this.canvas = ref)} />
+                    <div>
+                        <canvas className="takePhoto" ref={ref => (this.canvas = ref)} />
                     </div>
                 </div>
             </Container>
