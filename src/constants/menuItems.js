@@ -12,7 +12,7 @@ const menuItems = [
     name: 'Check-In',
     path: '/checkin',
     subMenu: [
-      { name: 'Check-In', path: '/' },
+      { name: 'Check-In', path: '/form' },
       { name: 'Rules', path: '/rules' },
     ],
   },

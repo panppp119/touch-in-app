@@ -62,7 +62,7 @@ class projects extends React.Component {
         <div className='gradient newgradient'>
           <img
             className='image '
-            src={require('../../../images/project.png')}
+            src={require('../../../img/project.png')}
             alt=''
           />
 
@@ -77,7 +77,7 @@ class projects extends React.Component {
         <div className='gradient2 newgradient'>
           <img
             className='image '
-            src={require('../../../images/project.png')}
+            src={require('../../../img/project.png')}
             alt=''
           />
           <div className='work-project newwork-project'>
@@ -91,7 +91,7 @@ class projects extends React.Component {
         <div className='gradient2 newgradient'>
           <img
             className='image '
-            src={require('../../../images/project.png')}
+            src={require('../../../img/project.png')}
             alt=''
           />
           <div className='work-project newwork-project'>

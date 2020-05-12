@@ -28,7 +28,11 @@ class checkIn extends React.Component {
         <br />
         <Link to='/Workfromhome_type'>
           <div className='workfromhome1'>
-            <img className='home' src={require('../../images/home.png')} />
+            <img
+              className='home'
+              src={require('../../images/home.png')}
+              alt=''
+            />
             <div className='d1'>
               <h3>Work From Home</h3>
             </div>
@@ -39,6 +43,7 @@ class checkIn extends React.Component {
             <img
               className='workout'
               src={require('../../images/workout.png')}
+              alt=''
             />
             <div className='d2'>
               <h3>Work Outside</h3>

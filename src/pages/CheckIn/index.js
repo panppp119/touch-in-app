@@ -9,7 +9,7 @@ const Profile = () => {
 
   return (
     <Switch>
-      <Route exact path={`${path}`} component={CheckIn} />
+      <Route exact path={`${path}/form`} component={CheckIn} />
       <Route exact path={`${path}/rules`} component={Rules} />
     </Switch>
   )

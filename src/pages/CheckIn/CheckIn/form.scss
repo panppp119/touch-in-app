@@ -133,33 +133,7 @@
     box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
   }
 
-  .card-detail {
-    background: #E5E5E5;
-    width: 100%;
-    margin-top: 60px;
-    margin-bottom: 10px;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-  }
 
-  .card-detail p {
-    display: flex;
-    margin-top: 20px;
-    padding: 0 10px;
-    font-style: normal;
-    font-weight: normal;
-  }
-
-  .border-detail {
-    border: 1px solid #FFFFFF;
-    width: 95%;
-    margin-left: 10px;
-  }
 
   @media (min-width: 1200px) {
     .card-img {
@@ -169,4 +143,16 @@
       background: #E5E5E5;
     }
   }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ImagesPosition{
+  margin-left: 500px;
 }
