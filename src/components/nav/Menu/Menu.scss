@@ -3,7 +3,7 @@
   height: 100vh;
   background-color: var(--disabled);
   position: fixed;
-  top: 47px;
+  top: 40px;
   left: 0;
   transition: transform 0.3s ease-in;
   overflow: auto;
@@ -14,10 +14,10 @@
     border: none;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     width: 20%;
     padding: 20px;
-    top: 57px;
+    top: 50px;
   }
 
   &.show {
@@ -63,8 +63,25 @@
 .menubar {
   width: 100%;
   background-color: var(--primary);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  @media screen and (min-width: 1024px) {
+    padding: 10px;
+  }
 
   span {
+    cursor: pointer;
+  }
+
+  svg {
+    font-size: 30px;
+    vertical-align: middle;
+    color: var(--white);
     cursor: pointer;
   }
 }

@@ -36,3 +36,5 @@ export const storage = firebase.storage()
 export const analytics = firebase.analytics()
 export const realtime = firebase.database()
 export const message = firebase.messaging()
+
+export default firebase

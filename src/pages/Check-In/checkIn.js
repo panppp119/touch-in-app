@@ -3,7 +3,7 @@ import './checkIn.scss'
 import { Link } from 'react-router-dom'
 //import moment from 'moment'
 class checkIn extends React.Component {
- /* componentWillMount(){
+  /* componentWillMount(){
   
     const timestamp = Date.now();
     console.log(new Intl.DateTimeFormat(
@@ -16,38 +16,37 @@ class checkIn extends React.Component {
        second: '2-digit'}).format(timestamp));
        //<h5>{moment(this.state.timestamp).format('DD/MM/YYYY, HH:mm')}</h5>
   }*/
-  render() {  
-    return(
-    <div>
-      <div className="row">
-      <h5>Check-In Page</h5>
-        <div className="col-2">
-  
-          </div>           
-      </div>
-     
-      <div className="border" />
-      <br/>
-      <Link to="/Workfromhome_type">
-      <div className="workfromhome1">
-      <img  className="home"  src={require('../../img/home.png')} />
-      <div className="d1">
-        <h3>Work From Home</h3>
-      </div>
-      </div>
-      </Link>
-      <Link>
-      <div className="workfromhome2">
-      <img  className="workout"  src={require('../../img/workout.png')} />
-      <div className="d2">
-        <h3>Work Outside</h3>
-      </div>
-      </div>
-      </Link>
-    
+  render() {
+    return (
+      <div>
+        <div className='row'>
+          <h5>Check-In Page</h5>
+          <div className='col-2'></div>
+        </div>
 
-    </div>
-    ) 
+        <div className='border' />
+        <br />
+        <Link to='/Workfromhome_type'>
+          <div className='workfromhome1'>
+            <img className='home' src={require('../../images/home.png')} />
+            <div className='d1'>
+              <h3>Work From Home</h3>
+            </div>
+          </div>
+        </Link>
+        <Link>
+          <div className='workfromhome2'>
+            <img
+              className='workout'
+              src={require('../../images/workout.png')}
+            />
+            <div className='d2'>
+              <h3>Work Outside</h3>
+            </div>
+          </div>
+        </Link>
+      </div>
+    )
   }
 }
 checkIn.defaultProps = {}
