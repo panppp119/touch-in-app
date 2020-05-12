@@ -163,6 +163,7 @@ export class UploadImage extends Component {
                 <div className="form-checkin">
            
                { <input
+                className=""
                 id='upload'
                 type='file'
                 name='uploadAwsS3'
