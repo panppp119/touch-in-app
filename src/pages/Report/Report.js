@@ -9,7 +9,7 @@ export class Report extends Component {
         super(props)
         this.ref = firebase.firestore().collection('Unknown') // Unknown เอาชื่อฐานข้อมูลมาแทน ตย. user
         this.state = {
-            Unknown: []
+            Unknown: [] // ตรงนี้ก็เช่นกัน 
         }
     }
 
@@ -32,7 +32,7 @@ export class Report extends Component {
             })
         })
         this.setState({
-            Unknown
+            Unknown // นี่ด้วย
         })
     }
 
