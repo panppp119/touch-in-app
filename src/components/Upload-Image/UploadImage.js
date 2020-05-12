@@ -6,6 +6,8 @@ import '../api/map.css';
 import { longdo, map, LongdoMap } from '../api/LongdoMap';
 import moment from 'moment'
 import './UploadImage.scss'
+import { storage } from '../../config/firebaseConfig.js';
+import * as firebase from 'firebase/app'
 
 /*const upload_img = document.getElementById("upload");
 const push_img = document.getElementById("push");*/
@@ -18,17 +20,16 @@ export class UploadImage extends Component {
           images: [],
           loading: false,
           value: '',
+
+     
           
         }
         
       }
-     
+ 
 
-      initMap(){
-        map.Layers.setBase(longdo.Layers.GRAY);
-      }
-    
-      
+
+
       async handleUpload (e) {
         const images = this.state.images
         const filesUpload = e.target.files
@@ -66,8 +67,34 @@ export class UploadImage extends Component {
           
         })
       }
+      async submitUpload () {
+
+        this.setState({loading: true})
+        const uploadAllImage =  firebase.database().ref('data')(async image => {
+          return new Promise((resolve, reject) => {
+            let formData = new FormData()
+            let file = image.fileUpload
+            formData.append('image', file)
+            let xhr = new XMLHttpRequest()
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                const response = JSON.parse(xhr.response)
+                if (response.result === true) {
+                  delete image.fileUpload
+                  resolve({...image, url: response.data.url})
+                }
+                reject(image)
+              }
+            }
+            xhr.open('post', '/upload', true)
+            xhr.send(formData)
+          })
+        })
+
+        await Promise.all(uploadAllImage)
+        this.setState({loading: false, images: [], value: ''})
+      }
       componentWillMount(){
-      
         const timestamp = Date.now();
         console.log(new Intl.DateTimeFormat(
           'en-US', 
@@ -78,6 +105,7 @@ export class UploadImage extends Component {
           minute: '2-digit',
            second: '2-digit'}).format(timestamp));
       }
+
       renderImages () {
         const mapKey = '5d4d47a40dbeaa10a0072cdc2e0e9622'
         const { images } = this.state
@@ -110,8 +138,16 @@ export class UploadImage extends Component {
               </div>
               
               <button type="button" className='btn btn-danger'>ยกเลิก</button>
-              <button type="button" className='btn btn-success'>บันทึก</button>
-              <button type="button" className='btn btn-primary'>รายละเอียด</button>
+              <button
+                type='button'
+                className='btn btn-success'
+                onClick={this.submitUpload.bind(this)}
+                disabled={this.state.loading === true ? 'disabled' : ''}>
+                {this.state.loading === true ? 'กำลังบันทึก...' : 'บันทึก'}
+              </button>
+
+        
+              <button  type="button" className='btn btn-primary'>รายละเอียด</button>
 
               </div>
             )
@@ -119,35 +155,6 @@ export class UploadImage extends Component {
         }
     
       }
-      async submitUpload () {
-        if (this.state.images.length < 1) {
-          console.log('กรุณาอัพโหลดรูปภาพก่อนนะจ๊ะ')
-          return false
-        }
-        this.setState({loading: true})
-        const uploadAllImage = this.state.images.map(async image => {
-          return new Promise((resolve, reject) => {
-            let formData = new FormData()
-            let file = image.fileUpload
-            formData.append('image', file)
-            let xhr = new XMLHttpRequest()
-            xhr.onreadystatechange = function () {
-              if (xhr.readyState === 4) {
-                const response = JSON.parse(xhr.response)
-                if (response.result === true) {
-                  delete image.fileUpload
-                  resolve({...image, url: response.data.url})
-                }
-                reject(image)
-              }
-            }
-            xhr.open('post', '/upload', true)
-            xhr.send(formData)
-          })
-        })
-        await Promise.all(uploadAllImage)
-        this.setState({loading: false, images: [], value: ''})
-      } 
 
     render() {
   
@@ -155,7 +162,7 @@ export class UploadImage extends Component {
             <Container>
                 <div className="form-checkin">
            
-                <input
+               { <input
                 id='upload'
                 type='file'
                 name='uploadAwsS3'
@@ -164,7 +171,9 @@ export class UploadImage extends Component {
                 value={this.state.value}
                 multiple
                 />
-
+               }
+         
+              
               <div className="row"> 
               <div id='showPreviewUpload' className="img-size">
                 {this.renderImages()}
