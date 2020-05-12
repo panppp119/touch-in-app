@@ -15,7 +15,7 @@ const Card = styles(Link)`
     margin: 0;
     width: 100px;
     height: auto;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .details {
