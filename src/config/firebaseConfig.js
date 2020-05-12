@@ -18,13 +18,14 @@ import 'firebase/messaging'
 // }
 
 const config = {
-    apiKey: "AIzaSyCfnlG_XkvCbtug5uvQih-6gLbWa1jWTyE",
-    authDomain: "react-601463021.firebaseapp.com",
-    databaseURL: "https://react-601463021.firebaseio.com",
-    projectId: "react-601463021",
-    storageBucket: "react-601463021.appspot.com",
-    messagingSenderId: "722437976589",
-    appId: "1:722437976589:web:63b825e14212b651"
+    apiKey: 'AIzaSyBBajrAIcxdN8Z0pT3U6Jl-kJBI4NNGE7c',
+    authDomain: 'touch-in-app.firebaseapp.com',
+    databaseURL: 'https://touch-in-app.firebaseio.com',
+    projectId: 'touch-in-app',
+    storageBucket: 'touch-in-app.appspot.com',
+    messagingSenderId: '910531456139',
+    appId: '1:910531456139:web:4114f0942937715c4e788e',
+    measurementId: 'G-TXT2Z9G76G',
 }
 
 firebase.initializeApp(config)
