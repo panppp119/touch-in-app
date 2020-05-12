@@ -1,6 +1,7 @@
 import React from 'react'
 
 import CheckInCard from 'components/card/CheckInCard'
+import CheckInCardWFH from 'components/card/CheckInCard-WFH'
 import ReportFilter from 'components/filter/ReportFilter'
 
 import './CheckInList.scss'
@@ -19,14 +20,14 @@ class CheckInList extends React.Component {
             imgSrc={require('../../images/workout.png')}
             checkinType='ปฏิบัติงานนอกสถานที่'
             projName='โปรเจค A'
-            path='/Workoutside'
+            path='/Report/Report-WFO'
           />
 
-          <CheckInCard
+          <CheckInCardWFH
             imgSrc={require('../../images/workfromhome.png')}
-            checkinType=' Work From Home'
+            checkinType='Work From Home'
             projName='โปรเจค B'
-            path='/Workfromhome'
+            path='/Report/Report-WFH'
           />
         </div>
       </div>
