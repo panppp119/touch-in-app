@@ -40,9 +40,7 @@ export class Form extends Component {
               </div>
              
 
-              <button type="button" className='btn btn-danger'>ยกเลิก</button>
-              <button type="button" className='btn btn-success'>บันทึก</button>
-              <button type="button" className='btn btn-primary'>รายละเอียด</button>
+
           </div>
       </Container>
         )
