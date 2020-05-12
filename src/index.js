@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
 import * as serviceWorker from './serviceWorker'
@@ -12,11 +11,9 @@ import './styles/main.scss'
 const store = storeConfig()
 
 ReactDOM.render(
-  <AppContainer>
-    <Provider store={store}>
-      <App history={history} />
-    </Provider>
-  </AppContainer>,
+  <Provider store={store}>
+    <App history={history} />
+  </Provider>,
   document.getElementById('root'),
 )
 

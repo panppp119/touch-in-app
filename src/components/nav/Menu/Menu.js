@@ -3,13 +3,20 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 import { FiMenu } from 'react-icons/fi'
+import { connect } from 'react-redux'
 
 import Container from 'components/layout/Container'
 import menuItems from 'constants/menuItems'
+import { logout } from 'actions/auth'
 
 import './Menu.scss'
 
 class Menu extends React.Component {
+  logout = () => {
+    this.props.setVisibility()
+    this.props.logout()
+  }
+
   render() {
     const { visibility, setVisibility, location } = this.props
 
@@ -69,7 +76,7 @@ class Menu extends React.Component {
                 )
               }
             })}
-            <Link to='/login' onClick={setVisibility}>
+            <Link to='/login' onClick={this.logout}>
               ออกจากระบบ
             </Link>
           </div>
@@ -89,4 +96,8 @@ Menu.propTypes = {
   setVisibility: PropTypes.func,
 }
 
-export default Menu
+const mapDispatchToProps = {
+  logout: () => logout(),
+}
+
+export default connect(null, mapDispatchToProps)(Menu)
