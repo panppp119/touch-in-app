@@ -8,8 +8,8 @@ import NoMatch from 'pages/NoMatch'
 import Workoutside from './Workoutside/Workoutside'
 import Workfromhome from './Workfromhome//Workfromhome'
 import Profile from 'pages/Profile'
-import Report from 'pages/Report'
 import CheckIn from 'pages/CheckIn'
+import Report from 'pages/Report'
 
 const routes = (
   <CoreLayout>
