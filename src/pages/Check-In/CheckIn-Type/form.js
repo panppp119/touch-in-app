@@ -27,13 +27,9 @@ export class Form extends Component {
               <div className='icon'>
                       <Camera sendFile={uploadImage} />
                   </div>
-                  
                   <div className='icon'>
                       <UploadImage/>
                   </div>
-
- 
-
                   <div className='icon'>
                       <BsGeoAlt />
                   </div>
