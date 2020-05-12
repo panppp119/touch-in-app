@@ -5,10 +5,10 @@ import './CheckIn.scss'
 
 import CheckInForm from 'components/form/CheckInForm'
 
-const uploadImage = async (file) => {
-  const formData = new FormData()
-  formData.append('file', file)
-}
+// const uploadImage = async (file) => {
+//   const formData = new FormData()
+//   formData.append('file', file)
+// }
 export class Form extends Component {
   render() {
     return (

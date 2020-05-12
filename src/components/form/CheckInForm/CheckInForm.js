@@ -4,7 +4,7 @@ import * as firebase from 'firebase/app'
 import { GoCloudUpload, GoDeviceCamera, GoTrashcan } from 'react-icons/go'
 import EXIF from 'exif-js'
 
-import Container from 'components/layout/Container'
+// import Container from 'components/layout/Container'
 // import { storage } from 'config/firebaseConfig.js'
 
 import './CheckInForm.scss'
@@ -62,7 +62,7 @@ export class CheckInForm extends Component {
       const imageType = image.raw.type.split('/')[1]
       const datetime = moment(image.datetime).unix()
 
-      storageRef
+      return storageRef
         .child(
           `/check-in/checkin_${datetime}.${
             imageType === 'jpeg' ? 'jpg' : imageType
@@ -102,6 +102,7 @@ export class CheckInForm extends Component {
   renderImages() {
     // const mapKey = '5d4d47a40dbeaa10a0072cdc2e0e9622'
     const { images } = this.state
+
     if (images.length > 0) {
       return images.map((image, index) => {
         return (
@@ -163,12 +164,12 @@ export class CheckInForm extends Component {
       const files = Object.keys(e.target.files) || []
       let images = []
 
-      files.map((fileId) => {
+      return files.map((fileId) => {
         const url = URL.createObjectURL(e.target.files[fileId])
         const comp = this
         const file = e.target.files[fileId]
 
-        EXIF.getData(e.target.files[fileId], function () {
+        return EXIF.getData(e.target.files[fileId], function () {
           let exifData = EXIF.getAllTags(this)
 
           console.log(file)
