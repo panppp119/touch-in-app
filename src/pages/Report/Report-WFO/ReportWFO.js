@@ -29,7 +29,7 @@ export class ReportWFO extends Component {
                     <div className='border-detail' />
                     <p>แผนก :</p>
                     <div className='border-detail' />
-                    <p>ประวัติการเช็คอิน :</p>
+                    <p>ประเภทการเช็คอิน :</p>
                     <div className='border-detail' />
                     <p>โปรเจค :</p>
                     <div className='border-detail' />
@@ -68,7 +68,7 @@ export class ReportWFO extends Component {
                     <div className='border-detail' />
                     <p>แผนก :</p>
                     <div className='border-detail' />
-                    <p>ประวัติการเช็คอิน :</p>
+                    <p>ประเภทการเช็คอิน :</p>
                     <div className='border-detail' />
                     <p>โปรเจค :</p>
                     <div className='border-detail' />
