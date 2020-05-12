@@ -6,7 +6,7 @@ import { BsGeoAlt } from 'react-icons/bs'
 import { BsCamera } from "react-icons/bs";*/
 
 import Camera from '../../../components/Camera/Camera'
-import UploadImage from '../../../components/upload/UploadImage/UploadImage'
+import UploadImage from '../../../components/form/CheckInForm/CheckInForm'
 
 const uploadImage = async (file) => {
   const formData = new FormData()

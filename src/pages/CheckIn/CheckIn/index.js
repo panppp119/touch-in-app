@@ -1,3 +1,3 @@
-import Form from './form'
+import CheckIn from './CheckIn'
 
-export default Form
+export default CheckIn

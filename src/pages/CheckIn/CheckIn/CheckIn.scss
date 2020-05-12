@@ -1,0 +1,21 @@
+.checkin {
+  padding: 10px 0;
+  padding-top: 50px;
+
+  @media screen and (min-width: 1280px) {
+    padding: 20px 0;
+    padding-top: 70px;
+
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--primary);
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 20px;
+    }
+  }
+}

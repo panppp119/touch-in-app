@@ -1,4 +1,31 @@
 * {
   --text-bold: 400;
   --text-normal: 300;
+
+  --text-size-normal: 16px;
+
+  p {
+    font-size: var(--text-size-normal);
+    font-weight: var(--text-normal);
+  }
+
+  h4 {
+    font-size: var(--text-size-normal);
+    font-weight: var(--text-bold);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: var(--text-bold);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: var(--text-bold);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: var(--text-bold);
+  }
 }
