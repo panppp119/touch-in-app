@@ -88,15 +88,10 @@ export class UploadImage extends Component {
               <div key={image.url} className="">
                 <img className="UploadImage" src={image.url} width={200} />
                 <br/>
-
-              
-
-
                 {/* <div className='map'>
                   <LongdoMap  id="longdo-map "mapKey={mapKey} callback={this.initMap} />
                   </div> 
                 */}
-                
               </div>
              
               <button type="button" className='btn-delete btn-danger-delete'
@@ -114,6 +109,10 @@ export class UploadImage extends Component {
                   <p>สถานที่ </p>
               </div>
               
+              <button type="button" className='btn btn-danger'>ยกเลิก</button>
+              <button type="button" className='btn btn-success'>บันทึก</button>
+              <button type="button" className='btn btn-primary'>รายละเอียด</button>
+
               </div>
             )
           })
