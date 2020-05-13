@@ -10,12 +10,14 @@ import Workfromhome from './Workfromhome//Workfromhome'
 import Profile from 'pages/Profile'
 import Report from 'pages/Report'
 import CheckIn from 'pages/CheckIn'
+import OperationTools from 'pages/OperationTools'
 
 const routes = (
   <CoreLayout>
     <Switch>
       <Route path='/Workoutside' component={Workoutside} />
       <Route path='/Workfromhome' component={Workfromhome} />
+      <Route exact path='/operation_tools' component={OperationTools} />
       <Route exact path='/login' component={Login} />
 
       <Route exact path='/' component={Dashboard} />
