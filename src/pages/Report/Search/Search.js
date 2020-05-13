@@ -2,19 +2,63 @@ import React, { Component } from 'react'
 import Container from 'components/layout/Container'
 import './Search.scss'
 import firebase from 'config/firebaseConfig'
+import CheckInCard from '../../../components/card/CheckInCard/index'
+import CheckInCardWFH from '../../../components/card/CheckInCard-WFH/index'
 
 
+function searchingFor(data) {
+    return function (x) {
+      
+        return (x.generic_name.toLowerCase().includes(data.toLowerCase()) || 
+        x.Name_type.toLowerCase().includes(data.toLowerCase()) || !data);
+    }
+  } 
 export class Report extends Component {
     constructor(props) {
         super(props)
-        this.ref = firebase.firestore().collection('Unknown') // Unknown เอาชื่อฐานข้อมูลมาแทน ตย. user
+       // this.ref = firebase.firestore().collection('Unknown') // Unknown เอาชื่อฐานข้อมูลมาแทน ตย. user
         this.state = {
-            Unknown: [] // ตรงนี้ก็เช่นกัน 
+            items: [], // ตรงนี้ก็เช่นกัน 
+            item_id:'',
+            checkin_workfromhome:'',
+            checkin_workoutside:'',
+            project:'',
+            department:'',
+            date1:'',
+            date2:'',
+            time:'',
+            location:'',
+            data:'',
         }
     }
 
     componentDidMount() {
-        this.unsubscribe = this.ref.onSnapshot(this.onCollection)
+        const itemsRef = firebase.database().ref('Datebase Name');
+        itemsRef.on('value', (snapshot) => {
+            let items = snapshot.val();
+            var newState = [];
+            for (let item in items) {
+                newState.push({
+                    item_id: item,
+                    checkin_workfromhome: items[item].checkin_workfromhome,
+                    checkin_workoutside: items[item].checkin_workoutside,
+                    project: items[item].project,
+                    department: items[item].department,
+                    date1: items[item].date1,
+                    date2: items[item].date2,
+                    time: items[item].time,
+                    location: items[item].location,
+                })
+            }
+            try {
+                this.setState({
+                    items: newState,
+                })
+            } catch (exception) { }
+        })
+    }
+    search(e) {
+        this.setState({ data: e.target.value })
     }
 
     onCollection = (querySnapshot) => {
@@ -47,6 +91,7 @@ export class Report extends Component {
     }
 
     render() {
+        const items = this.state.items.slice().filter(searchingFor(this.state.term));
         return (
             <Container>
                 <div className='search-report'>
@@ -84,6 +129,33 @@ export class Report extends Component {
                         <button type="button" className='btn btn-danger' onClick={this.reset} value="ยกเลิก" >ยกเลิก</button>
                     </div>
                 </div>
+                {items.map(item =>{  
+              return (     
+               
+           
+         <div className='checkin-list'>
+          <CheckInCard
+            imgSrc={require('../../images/workout.png')}
+            checkinType={item.checkin_workoutside}
+            projName={item.project}
+            time={item.time}
+            location={item.location}
+            path='/Report/Report-WFO'/>
+
+          <CheckInCardWFH
+            imgSrc={require('../../images/workfromhome.png')}
+            checkinType={item.checkin_workfromhome}
+            projName={item.project}
+            time={item.time}
+            location={item.location}
+            path='/Report/Report-WFH'/>
+        </div>
+         
+              
+
+             ) })} 
+                
+            
             </Container>
         )
     }
