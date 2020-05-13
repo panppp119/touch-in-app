@@ -1,10 +1,13 @@
 @import '~antd/dist/antd.css';
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
 
 @import './variables/colors';
+@import './variables/typo';
 
 *,
 html,
 body {
   font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  font-weight: var(--text-normal);
 }
