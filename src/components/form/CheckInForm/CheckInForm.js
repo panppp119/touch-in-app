@@ -56,7 +56,7 @@ export class CheckInForm extends Component {
 
   submitCheckIn = () => {
     const { images } = this.state
-    const storageRef = firebase.storage().ref()
+    const storageRef = firebase.storage().ref('')
 
     images.map((image) => {
       const imageType = image.raw.type.split('/')[1]
@@ -173,7 +173,7 @@ export class CheckInForm extends Component {
           let exifData = EXIF.getAllTags(this)
 
           console.log(file)
-
+if(''){ //เช็ค obj empty
           if (exifData) {
             const GPSLat = exifData.GPSLatitude || []
             const GPSLng = exifData.GPSLongitude || []
@@ -206,14 +206,19 @@ export class CheckInForm extends Component {
             })
           } else {
             images.push({
-              location: 'No exif data found in image.',
+              
+           location: 'No exif data found in image.',
               raw: file,
               preview: url,
               datetime: `${exifData.DateTime.split(' ')[0]
                 .split(':')
                 .join('/')} ${exifData.DateTime.split(' ')[1]}`,
+
             })
           }
+        }else{
+          //last lastmodifed
+        }
 
           comp.setState({ images })
         })
