@@ -10,10 +10,15 @@ import Workfromhome from './Workfromhome//Workfromhome'
 import Profile from 'pages/Profile'
 import Report from 'pages/Report'
 import CheckIn from 'pages/CheckIn'
+import CheckInCRUD from './Operation Tools/Check-in-type/CheckInCRUD'
+import ImportCheckIn from 'pages/Operation Tools/import-Check-In/ImportCheckIn'
 
 const routes = (
   <CoreLayout>
     <Switch>
+
+      <Route path='/ImportCheckIn' component={ImportCheckIn}/>
+      <Route path='/operation_tools/checkin_type' component={CheckInCRUD} />
       <Route path='/Workoutside' component={Workoutside} />
       <Route path='/Workfromhome' component={Workfromhome} />
       <Route exact path='/login' component={Login} />
