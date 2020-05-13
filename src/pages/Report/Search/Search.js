@@ -125,14 +125,12 @@ export class Report extends Component {
                                 <option>Test 3</option>
                             </select>
                         </div>
-                        <button type="button" className='btn btn-success'>ค้นหา</button>
+                        <button  type="button" className='btn btn-success' onChange={this.search.bind(this)} value={this.state.term} >ค้นหา</button>
                         <button type="button" className='btn btn-danger' onClick={this.reset} value="ยกเลิก" >ยกเลิก</button>
                     </div>
                 </div>
-                {items.map(item =>{  
+                {  this.state.items.filter(searchingFor(this.state.term)).map((item) =>{  
               return (     
-               
-           
          <div className='checkin-list'>
           <CheckInCard
             imgSrc={require('../../images/workout.png')}
