@@ -1,39 +1,50 @@
 import React from 'react'
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import { FaGoogle } from 'react-icons/fa'
+import { connect } from 'react-redux'
 
-import firebase, { auth } from 'config/firebaseConfig'
+import { login } from 'actions/auth'
 import touchLogo from 'images/touch_logo.png'
 
 import './Login.scss'
 
 class Login extends React.Component {
-  state = { isSignedIn: false }
-
-  uiConfig = {
-    signInFlow: 'popup',
-    signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
-    callbacks: {
-      signInSuccess: () => false,
-    },
+  state = {
+    isSignedIn: false,
+    ggError: null,
   }
 
-  componentDidMount = () => {
-    auth.onAuthStateChanged((user) => {
-      this.setState({ isSignedIn: !!user })
-      console.log('user', user)
-    })
+  ggSignIn = (e) => {
+    e.preventDefault()
+
+    this.props.login()
   }
 
   render() {
+    const { ggError } = this.state
+
     return (
       <div className='login-page'>
         <div className='sign-in'>
-          <img src={touchLogo} alt='touch-logo' className='touch-logo' />
-          <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={auth} />
+          <div className='touch-logo'>
+            <img src={touchLogo} alt='touch-logo' />
+          </div>
+
+          <button className='google' onClick={this.ggSignIn}>
+            <FaGoogle />
+            เข้าสู่ระบบด้วย Google
+          </button>
+
+          {ggError && <p className='error'>{ggError.message}</p>}
         </div>
       </div>
     )
   }
 }
 
-export default Login
+const mapStateToProps = (state) => ({})
+
+const mapDispatchToProps = {
+  login: () => login(),
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
