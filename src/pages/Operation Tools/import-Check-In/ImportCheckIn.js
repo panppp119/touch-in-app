@@ -33,7 +33,9 @@ class ImportCheckIn extends React.Component {
            <h2 className="font">&nbsp;เพิ่มประเภทการเช็คอิน</h2>
         </div>
         <img className="back-icon" src={require('../../../images/back.png')} />
-        
+
+
+
         <div>
            <h2>กรุณาเลือกไอคอนการเช็คอิน </h2>
         <input type="file" accept='image/*' className="form-control" onChange={this.uploadSingleFile} />
