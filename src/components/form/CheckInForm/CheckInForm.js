@@ -3,6 +3,7 @@ import moment from 'moment'
 import * as firebase from 'firebase/app'
 import { GoCloudUpload, GoDeviceCamera, GoTrashcan } from 'react-icons/go'
 import EXIF from 'exif-js'
+import isEmpty from 'lodash.isempty';
 
 // import Container from 'components/layout/Container'
 // import { storage } from 'config/firebaseConfig.js'
@@ -129,12 +130,15 @@ export class CheckInForm extends Component {
             <div className='card-detail'>
               <p>วัน, เวลา : {image.datetime}</p>
               <div className='border-detail' />
+              
               <p>
                 สถานที่ :
                 <span style={{ margin: '0 10px' }}>{image.location}</span>
+                {image.map && image.map !=='' && (
                 <a href={image.map} target='_blank' rel='noopener noreferrer'>
                   Map
                 </a>
+                )}
               </p>
             </div>
             {/* <button type='button' className='btn btn-danger'>
@@ -173,8 +177,8 @@ export class CheckInForm extends Component {
           let exifData = EXIF.getAllTags(this)
 
           console.log(file)
-if(''){ //เช็ค obj empty
-          if (exifData) {
+   try{
+          if(!isEmpty(exifData)) {
             const GPSLat = exifData.GPSLatitude || []
             const GPSLng = exifData.GPSLongitude || []
             let latArr = GPSLat.map((item) => item.numerator) || []
@@ -191,41 +195,57 @@ if(''){ //เช็ค obj empty
 
             let location =
               GPSLat.length > 0 ? `${lat}, ${lng}` : 'Location Not Found!'
+              
+      
+            
+            let map =
+              GPSLat.length > 0
+                ? `https://www.google.com/maps/place/${location
+                    .split(', ')[0]
+                    .split(' ')
+                    .join('')}+${location.split(', ')[1].split(' ').join('')}`
+                : ''
+
+            let datetime =
+              GPSLat.length > 0
+                ? `${exifData.DateTime.split(' ')[0].split(':').join('/')} ${
+                    exifData.DateTime.split(' ')[1]
+                  }`
+                : moment(file.lastModified).format('YYYY/MM/DD HH:mm:ss')
 
             images.push({
               raw: file,
-              location,
-              map: `https://www.google.com/maps/place/${location
-                .split(', ')[0]
-                .split(' ')
-                .join('')}+${location.split(', ')[1].split(' ').join('')}`,
               preview: url,
-              datetime: `${exifData.DateTime.split(' ')[0]
-                .split(':')
-                .join('/')} ${exifData.DateTime.split(' ')[1]}`,
+              location,
+              map,
+              datetime,
             })
-          } else {
-            images.push({
+          } 
+          else 
+          {
+           
+           images.push({
               
            location: 'No exif data found in image.',
               raw: file,
               preview: url,
-              datetime: `${exifData.DateTime.split(' ')[0]
-                .split(':')
-                .join('/')} ${exifData.DateTime.split(' ')[1]}`,
-
+              datetime : moment(file.lastModified).format('DD/MM/YYYY, HH:mm')
+              
             })
+      
+
+
           }
-        }else{
-          //last lastmodifed
         }
+        catch(ex){
+          console.log(images)
+          }
 
           comp.setState({ images })
         })
       })
     }
   }
-
   // getImageLocation = (file) => {
   //   EXIF.getData(file, function () {
   //     var exifData = EXIF.getAllTags(this)
