@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from 'styled-components'
-
+import firebase from '../../.././config/firebaseConfig'
 const Filter = styles.div`
   margin-bottom: 10px;
 
@@ -45,6 +45,40 @@ const Filter = styles.div`
     }
   }
 `
+function searchingFor(term) {
+  return function (x) {
+    
+      return (x.generic_name.toLowerCase().includes(term.toLowerCase()) || 
+      x.Name_type.toLowerCase().includes(term.toLowerCase()) || !term);
+  }
+} 
+function componentDidMount  () {
+  const itemsRef = firebase.database().ref('Datebase Name');
+  itemsRef.on('value', (snapshot) => {
+      let items = snapshot.val();
+      var newState = [];
+      for (let item in items) {
+          newState.push({
+              item_id: item,
+              checkin: items[item].checkin,
+              project: items[item].project,
+              department: items[item].department,
+              date1: items[item].date1,
+              date2: items[item].date2,
+              time: items[item].time,
+              location: items[item].location,
+          })
+      }
+      try {
+          this.setState({
+              items: newState,
+          })
+      } catch (exception) { }
+  })
+}
+function search  (e) {
+  this.setState({ data: e.target.value })
+}
 
 const ReportFilter = () => {
   return (
