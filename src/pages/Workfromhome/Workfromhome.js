@@ -1,68 +1,59 @@
 import React from 'react'
-import './Workfromhome.scss'
 
+import './Workfromhome.scss'
 
 class Workfromhome extends React.Component {
   constructor() {
-    super();
+    super()
     var today = new Date(),
-        date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+      date =
+        today.getFullYear() +
+        '-' +
+        (today.getMonth() + 1) +
+        '-' +
+        today.getDate()
     this.state = {
-        date: date
-    };
-}
+      date: date,
+    }
+  }
   render() {
-    
-    return(
-      <div>
-      <h3 className="row">Work From Home Page</h3>
-      <div className="row">
-        <h5>ประวัติการเช็คอิน</h5>
-          <div className="col-2">
-           {this.state.date} 
-            </div>           
+    return (
+      <div className='work-from-home'>
+        <h3 className='row'>Work From Home Page</h3>
+        <div className='row'>
+          <h5>ประวัติการเช็คอิน</h5>
+          <div className='col-4'>{this.state.date}</div>
         </div>
-        <img  className="search"  src={require('../../img/search-logo.png')} />  
-        <div className="border" />
-  
-      
-        <div className="sumgroup2">
-        <div className="group">
-          <div className="group2"/>
-          <div className="font">
-          Work From Home
+
+        <div className='sumgroup2'>
+          <div className='group5'>
+            <div className='group6' />
+            <div className='font2'>Work From Home</div>
+          </div>
+          <div className='projectgroup3'>
+            <div className='projectgroup4' />
+            <div className='fontproject2'>โปรเจ็ค A</div>
+          </div>
+          <div className='workoutdetail3'>
+            สถานที่
+            <div className='linedetail2' />
+            ตำบล
+            <div className='linedetail2' />
+            อำเภอ
+            <div className='linedetail2' />
+            จังหวัด
+            <div className='linedetail2' />
+            เวลา
+            <div className='linedetail2' />
+            วันที่
+            <div className='linedetail2' />
+            พิกัด
+            <div className='linedetail2' />
+            <div className='workcard' />
           </div>
         </div>
-        <div className="projectgroup">
-        <div className="projectgroup2"/>
-        <div className="fontproject">
-          โปรเจ็ค A
-        </div>
-        </div>
-        <div className="workoutdetail">
-     
-          สถานที่ 
-          <div className="linedetail"/>
-          ตำบล 
-          <div className="linedetail"/>
-          อำเภอ 
-          <div className="linedetail"/>
-          จังหวัด 
-          <div className="linedetail"/>
-          เวลา 
-          <div className="linedetail"/>
-          วันที่ 
-          <div className="linedetail"/>
-          พิกัด 
-          <div className="linedetail"/>
-          <div className="workcard"/>
-
-        </div>
-        </div>
-    
-  
       </div>
-    ) 
+    )
   }
 }
 

@@ -1,0 +1,40 @@
+.login-page {
+  position: relative;
+
+  .sign-in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+
+    .touch-logo {
+      max-width: 250px;
+      width: 100%;
+      margin: auto;
+      margin-top: 40%;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 30%;
+      }
+    }
+
+    .google {
+      border-radius: 6px;
+      padding: 10px 20px;
+      outline: none;
+
+      svg {
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+    }
+  }
+}

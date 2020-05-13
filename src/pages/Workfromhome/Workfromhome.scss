@@ -1,13 +1,154 @@
-.sumgroup2{
+.work-from-home {
+  padding: 20px 0;
+  padding-top: 10px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 20px;
+  }
+
+  .sumgroup2 {
     border: 1px solid black;
-    width: 1000px;
-    height: 650px;
-    margin-top:40px ;
-}
-.workcard{
-    width: 300px;
-    height: 200px;
-    margin-left: 330px;
-    margin-top: 50px;
+    width: 350px;
+    height: 450px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    .sumgroup2 {
+      width: 1000px;
+      height: 650px;
+    }
+  }
+
+  .workcard {
+    width: 120px;
+    height: 90px;
+    margin-left: 95px;
+    margin-top: 10px;
     background: #FFFFFF;
+  }
+
+  @media (min-width: 1280px) {
+    .workcard {
+      width: 250px;
+      height: 200px;
+      margin-left: 330px;
+      margin-top: 50px;
+    }
+  }
+
+  .workoutdetail3{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 35px;
+    background: #E5E5E5;
+    border-radius: 10px;
+
+  }
+
+  @media (min-width: 1280px) {
+    .workoutdetail3{
+      width: 900px;
+      height: 500px;
+      margin-top: 20px;
+      margin-left: 45px;
+      background: #E5E5E5;
+      border-radius: 10px;
+    }
+  }
+}
+.linedetail2 {
+  width: 339px;
+  height: 0px;
+  margin-top: 2px;
+  margin-left: 0px;
+  border: 0.1px solid white;
+  width: 100%;
+}
+
+.group5 {
+  width: 250px;
+  height: 23px;
+  margin-top: 20px;
+  margin-left: 35px;
+  background: #F68B81;
+  border: 1px solid black;
+}
+
+@media (min-width: 1280px) {
+  .group5{
+    width: 900px;
+    height: 23px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background: #F68B81;
+    border: 1px solid black;
+  }
+}
+.group6{
+  display: block;
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+  background: #e6e3e3;
+  box-shadow: 0 0 3px gray;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+  border: 1px solid black;
+}
+
+.font2{
+  color: white;
+  margin-left: 35px;
+  margin-top: -22px;
+}
+.projectgroup3{
+  width: 250px;
+  height: 23px;
+  margin-top: 20px;
+  margin-left: 35px;
+  background: #E5E5E5;
+  border: 1px solid black;
+}
+
+@media (min-width: 1280px) {
+  .projectgroup3{
+    width: 900px;
+    height: 23px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background: #E5E5E5;
+    border: 1px solid black;
+  }
+}
+
+.projectgroup4{
+  display: block;
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+  background: #807e7e;
+  box-shadow: 0 0 3px gray;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+  border: 1px solid black;
+}
+.fontproject2{
+  color: black;
+  margin-left: 35px;
+  margin-top: -22px;
+
 }

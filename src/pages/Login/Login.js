@@ -1,9 +1,50 @@
 import React from 'react'
+import { FaGoogle } from 'react-icons/fa'
+import { connect } from 'react-redux'
+
+import { login } from 'actions/auth'
+import touchLogo from 'images/touch_logo.png'
+
+import './Login.scss'
 
 class Login extends React.Component {
+  state = {
+    isSignedIn: false,
+    ggError: null,
+  }
+
+  ggSignIn = (e) => {
+    e.preventDefault()
+
+    this.props.login()
+  }
+
   render() {
-    return <h1>Login Page</h1>
+    const { ggError } = this.state
+
+    return (
+      <div className='login-page'>
+        <div className='sign-in'>
+          <div className='touch-logo'>
+            <img src={touchLogo} alt='touch-logo' />
+          </div>
+
+          <button className='google' onClick={this.ggSignIn}>
+            <FaGoogle />
+            เข้าสู่ระบบด้วย Google
+          </button>
+
+          {ggError && <p className='error'>{ggError.message}</p>}
+        </div>
+      </div>
+    )
   }
 }
 
-export default Login
+const mapStateToProps = (state) => ({})
+
+const mapDispatchToProps = {
+  login: () => login(),
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

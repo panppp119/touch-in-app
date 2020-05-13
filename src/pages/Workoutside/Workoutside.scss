@@ -1,116 +1,209 @@
-.group{
-width: 900px;
-height: 23px;
-margin-top: 20px;
-margin-left: 45px;
-background: #F68B81;
-border: 1px solid black;
-}
-.group2{
-display:block;
-width:22px;
-height:22px;
-line-height:20px;
-border: 2px solid #f5f5f5;
-border-radius: 50%;
-color:#f5f5f5;
-text-align:center;
-text-decoration:none;
-background: #e6e3e3;
-box-shadow: 0 0 3px gray;
-font-size:20px;
-font-weight:bold;
-margin-left: 5px;
-border: 1px solid black;
-}
-.font{
+.work-outside {
+  padding: 20px 0;
+  padding-top: 10px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 20px;
+  }
+
+  .group {
+    width: 250px;
+    height: 23px;
+    margin-top: 20px;
+    margin-left: 35px;
+    background: #F68B81;
+    border: 1px solid black;
+  }
+
+  @media (min-width: 1280px) {
+    .group {
+      width: 900px;
+      height: 23px;
+      margin-top: 20px;
+      margin-left: 45px;
+      background: #F68B81;
+      border: 1px solid black;
+    }
+  }
+
+  .group2 {
+    display: block;
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color: #f5f5f5;
+    text-align: center;
+    text-decoration: none;
+    background: #e6e3e3;
+    box-shadow: 0 0 3px gray;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    border: 1px solid black;
+  }
+
+  .font {
     color: white;
     margin-left: 35px;
     margin-top: -22px;
-}
-.projectgroup{
-width: 900px;
-height: 23px;
-margin-top: 20px;
-margin-left: 45px;
-background: #E5E5E5;
-border: 1px solid black;
-}
-.projectgroup2{
-    display:block;
-    width:22px;
-    height:22px;
-    line-height:20px;
+  }
+
+  .projectgroup {
+    width: 250px;
+    height: 23px;
+    margin-top: 20px;
+    margin-left: 35px;
+    background: #E5E5E5;
+    border: 1px solid black;
+  }
+
+  @media (min-width: 1280px) {
+    .projectgroup {
+      width: 900px;
+      height: 23px;
+      margin-top: 20px;
+      margin-left: 45px;
+      background: #E5E5E5;
+      border: 1px solid black;
+    }
+  }
+
+  .projectgroup2 {
+    display: block;
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
     border: 2px solid #f5f5f5;
     border-radius: 50%;
-    color:#f5f5f5;
-    text-align:center;
-    text-decoration:none;
+    color: #f5f5f5;
+    text-align: center;
+    text-decoration: none;
     background: #807e7e;
     box-shadow: 0 0 3px gray;
-    font-size:20px;
-    font-weight:bold;
+    font-size: 20px;
+    font-weight: bold;
     margin-left: 5px;
     border: 1px solid black;
-    }
-    .fontproject{
-        color: black;
-        margin-left: 35px;
-        margin-top: -22px;
-        
-    }
-    .workoutdetail{
-        width: 900px;
-        height: 500px;
-        margin-top: 20px;
-        margin-left: 45px;
-        background: #E5E5E5;
-        border-radius: 10px;
-      
-    }
-    .borderdetail{
-        width: 900px;
-        height: 2px;
-        margin-left: 0px;
-    }
+  }
 
-    .fontdetail{
-        color: black;
-        margin-left: 35px;
-        margin-top: -22px;
+  .fontproject {
+    color: black;
+    margin-left: 35px;
+    margin-top: -22px;
+
+  }
+
+  .workoutdetail {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 35px;
+    background: #E5E5E5;
+    border-radius: 10px;
+
+  }
+
+  @media (min-width: 1280px) {
+    .workoutdetail {
+      width: 900px;
+      height: 500px;
+      margin-top: 20px;
+      margin-left: 45px;
+      background: #E5E5E5;
+      border-radius: 10px;
     }
-    .linedetail{
-        width: 339px;
-        height: 0px;
-        margin-top: 2px;
-        margin-left: 0px;
-        border: 0.1px solid white;
-        width: 100%;
+  }
+
+  .borderdetail {
+    width: 900px;
+    height: 2px;
+    margin-left: 0px;
+  }
+
+  .fontdetail {
+    color: black;
+    margin-left: 35px;
+    margin-top: -22px;
+  }
+
+  .linedetail {
+    width: 339px;
+    height: 0px;
+    margin-top: 2px;
+    margin-left: 0px;
+    border: 0.1px solid white;
+    width: 100%;
+  }
+
+  .card1 {
+    width: 80px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 30px;
+    background: #FFFFFF;
+  }
+
+  @media (min-width: 1280px) {
+    .card1 {
+      width: 180px;
+      height: 150px;
+      margin-left: 100px;
+      margin-top: 50px;
+      background: #FFFFFF;
     }
-    .card1{
-        width: 180px;
-        height: 150px;
-        margin-left: 100px;
-        margin-top: 50px;
-        background: #FFFFFF;
+  }
+
+  .card2 {
+    width: 80px;
+    height: 50px;
+    margin-left: 105px;
+    margin-top: -50px;
+    background: #FFFFFF;
+  }
+
+  @media (min-width: 1280px) {
+    .card2 {
+      width: 180px;
+      height: 150px;
+      margin-left: 350px;
+      margin-top: -150px;
+      background: #FFFFFF;
     }
-    .card2{
-        width: 180px;
-        height: 150px;
-        margin-left: 350px;
-        margin-top: -150px;
-        background: #FFFFFF;
+  }
+
+  .card3 {
+    width: 80px;
+    height: 50px;
+    margin-left: 200px;
+    margin-top: -50px;
+    background: #FFFFFF;
+  }
+
+  @media (min-width: 1280px) {
+    .card3 {
+      width: 180px;
+      height: 150px;
+      margin-left: 600px;
+      margin-top: -150px;
+      background: #FFFFFF;
     }
-    .card3{
-        width: 180px;
-        height: 150px;
-        margin-left: 600px;
-        margin-top: -150px;
-        background: #FFFFFF;
+  }
+
+  .sumgroup {
+    border: 1px solid black;
+    width: 370px;
+    height: 850px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    .sumgroup {
+      border: 1px solid black;
+      width: 1000px;
+      height: 1250px;
+      margin-top: 40px;
     }
-    .sumgroup{
-        border: 1px solid black;
-        width: 1000px;
-        height: 1250px;
-        margin-top:40px ;
-    }
+  }
+}

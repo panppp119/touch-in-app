@@ -1,0 +1,34 @@
+.checkin-report {
+  padding: 20px 0;
+  padding-top: 50px;
+
+  h2 {
+    border-bottom: 1px solid var(--black);
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 70px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .checkin-list {
+    margin-top: 10px;
+
+    a {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width) {
+      margin-top: 20px;
+
+      a {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
