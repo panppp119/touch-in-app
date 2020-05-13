@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import './users.scss'
 import { BsPlusCircleFill } from 'react-icons/bs'
 import firebase, { storage } from 'config/firebaseConfig'
 import * as _ from 'lodash'
+
+import './Users.scss'
 
 export class Users extends Component {
   constructor() {
