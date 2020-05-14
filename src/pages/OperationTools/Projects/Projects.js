@@ -1,5 +1,5 @@
 import React from 'react'
-import './projects.scss'
+import './Projects.scss'
 //import { Link } from 'react-router-dom'
 import axios from 'axios'
 //import * as XLSX from 'xlsx';
