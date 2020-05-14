@@ -5,10 +5,12 @@ import { GoCloudUpload, GoDeviceCamera, GoTrashcan } from 'react-icons/go'
 import EXIF from 'exif-js'
 import isEmpty from 'lodash.isempty';
 
+
 // import Container from 'components/layout/Container'
 // import { storage } from 'config/firebaseConfig.js'
 
 import './CheckInForm.scss'
+import Camera from 'components/Camera/Camera'
 
 
 /*const upload_img = document.getElementById("upload");
@@ -17,6 +19,7 @@ const push_img = document.getElementById("push");*/
 export class CheckInForm extends Component {
   state = {
     images: [],
+ 
   }
 
   // async handleUpload(e) {
@@ -62,6 +65,7 @@ export class CheckInForm extends Component {
 
   submitCheckIn = () => {
     const { images } = this.state
+
     const storageRef = firebase.storage().ref('')
    
     images.map((image) => {
@@ -82,7 +86,7 @@ export class CheckInForm extends Component {
         
         
     })
-  
+
 
     // const uploadAllImage = firebase.database().ref('data')(async (image) => {
     //   return new Promise((resolve, reject) => {
@@ -112,6 +116,9 @@ export class CheckInForm extends Component {
   renderImages() {
     // const mapKey = '5d4d47a40dbeaa10a0072cdc2e0e9622'
     const { images } = this.state
+    
+
+    
 
     if (images.length > 0) {
       return images.map((image, index) => {
@@ -176,6 +183,7 @@ export class CheckInForm extends Component {
     document.getElementById('upload').onchange = (e) => {
       const files = Object.keys(e.target.files) || []
       let images = []
+    
 
       return files.map((fileId) => {
         const url = URL.createObjectURL(e.target.files[fileId])
@@ -197,10 +205,10 @@ export class CheckInForm extends Component {
             let lngChar = exifData.GPSLongitudeRef
 
             let lat = `${latArr[0]}° ${latArr[1]}' ${
-              GPSLat[2] / 100
+              latArr[2] / GPSLat[2].denominator
             }" ${latChar}`
             let lng = `${lngArr[0]}° ${lngArr[1]}' ${
-              GPSLng[2] / 100
+              lngArr[2] / GPSLng[2].denominator
             }" ${lngChar}`
 
             let location =
@@ -230,6 +238,7 @@ export class CheckInForm extends Component {
               map,
               datetime,
             })
+
   
           } 
           else 
@@ -243,6 +252,7 @@ export class CheckInForm extends Component {
               datetime : moment(file.lastModified).format('DD/MM/YYYY, HH:mm')
               
             })
+
       
 
 
@@ -283,6 +293,39 @@ export class CheckInForm extends Component {
   //   })
   // }
 
+  
+  processDevices(devices) {
+    devices.forEach((device) => {
+      console.log(device.label)
+      this.setDevice(device)
+    })
+  }
+
+  async setDevice(device) {
+    const { deviceId } = device
+    const stream = await navigator.mediaDevices.getUserMedia({
+      audio: false,
+      video: { deviceId },
+    })
+
+    this.videoPlayer.srcObject = stream
+    this.videoPlayer.play()
+  }
+
+  async componentDidMount() {
+    const cameras = await navigator.mediaDevices.enumerateDevices()
+
+    this.processDevices(cameras)
+  }
+
+  takePhoto = () => {
+    //const { sendFile } = this.props
+    const images2 = this.images2.getContext('2d')
+
+    images2.drawImage(this.videoPlayer, 0, 0, 320, 150)
+    //this.canvas.toBlob(sendFile)
+  }
+
   render() {
     return (
       <div className='checkin-form'>
@@ -297,7 +340,7 @@ export class CheckInForm extends Component {
         <div className='form-group'>
           <div className='form-field'>
             <label>Camera</label>
-            <GoDeviceCamera />
+            <GoDeviceCamera onClick={this.takePhoto} />
           </div>
 
           <div className='form-field'>
@@ -315,7 +358,20 @@ export class CheckInForm extends Component {
             />
           </div>
         </div>
+        <div className='form-checkin'>
+        <div hidden='hidden'>
+          <video
+            ref={(ref) => (this.videoPlayer = ref)}
+            width='50'
+            heigh='50'
+          />
+        </div>
 
+
+        <div>
+          <canvas className='takePhoto' ref={(ref) => (this.images2 = ref)} />
+        </div>
+      </div>
         {this.renderImages()}
 
         {/* <div className='form-checkin'>
