@@ -238,7 +238,7 @@ export class CheckInForm extends Component {
           }
         }
         catch(ex){
-          console.log(images)
+          console.log('console.log ' , exifData.DateTime)
           }
 
           comp.setState({ images })
