@@ -9,7 +9,7 @@ import isEmpty from 'lodash.isempty';
 // import { storage } from 'config/firebaseConfig.js'
 
 import './CheckInForm.scss'
-import { Alert } from 'antd'
+
 
 /*const upload_img = document.getElementById("upload");
 const push_img = document.getElementById("push");*/
@@ -63,7 +63,7 @@ export class CheckInForm extends Component {
   submitCheckIn = () => {
     const { images } = this.state
     const storageRef = firebase.storage().ref('')
-    alert('บันทึกสำเร็จ')
+   
     images.map((image) => {
       const imageType = image.raw.type.split('/')[1]
       const datetime = moment(image.datetime).unix()
@@ -79,6 +79,7 @@ export class CheckInForm extends Component {
         .then((snapshot) => {
           console.log('uploaded', snapshot)
         })
+        
         
     })
   
@@ -185,8 +186,9 @@ export class CheckInForm extends Component {
           let exifData = EXIF.getAllTags(this)
 
           console.log(file)
-   try{
-          if(!isEmpty(exifData)) {
+   //try{
+          if(!isEmpty(exifData.DateTime)) {
+        
             const GPSLat = exifData.GPSLatitude || []
             const GPSLng = exifData.GPSLongitude || []
             let latArr = GPSLat.map((item) => item.numerator) || []
@@ -195,10 +197,10 @@ export class CheckInForm extends Component {
             let lngChar = exifData.GPSLongitudeRef
 
             let lat = `${latArr[0]}° ${latArr[1]}' ${
-              latArr[2] / 100
+              GPSLat[2] / 100
             }" ${latChar}`
             let lng = `${lngArr[0]}° ${lngArr[1]}' ${
-              lngArr[2] / 100
+              GPSLng[2] / 100
             }" ${lngChar}`
 
             let location =
@@ -228,6 +230,7 @@ export class CheckInForm extends Component {
               map,
               datetime,
             })
+  
           } 
           else 
           {
@@ -244,10 +247,10 @@ export class CheckInForm extends Component {
 
 
           }
-        }
+      /*  }
         catch(ex){
           console.log('console.log ' , exifData.DateTime)
-          }
+          }*/
 
           comp.setState({ images })
         })
