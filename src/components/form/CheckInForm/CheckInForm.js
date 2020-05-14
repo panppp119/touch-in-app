@@ -9,6 +9,7 @@ import isEmpty from 'lodash.isempty';
 // import { storage } from 'config/firebaseConfig.js'
 
 import './CheckInForm.scss'
+import { Alert } from 'antd'
 
 /*const upload_img = document.getElementById("upload");
 const push_img = document.getElementById("push");*/
@@ -55,15 +56,20 @@ export class CheckInForm extends Component {
   //   })
   // }
 
+ /* alertSuccess(){
+    alert("บันทึกสำเร็จ")
+  }*/
+
   submitCheckIn = () => {
     const { images } = this.state
     const storageRef = firebase.storage().ref('')
-
+    alert('บันทึกสำเร็จ')
     images.map((image) => {
       const imageType = image.raw.type.split('/')[1]
       const datetime = moment(image.datetime).unix()
 
       return storageRef
+      
         .child(
           `/check-in/checkin_${datetime}.${
             imageType === 'jpeg' ? 'jpg' : imageType
@@ -73,7 +79,9 @@ export class CheckInForm extends Component {
         .then((snapshot) => {
           console.log('uploaded', snapshot)
         })
+        
     })
+  
 
     // const uploadAllImage = firebase.database().ref('data')(async (image) => {
     //   return new Promise((resolve, reject) => {
@@ -246,6 +254,7 @@ export class CheckInForm extends Component {
       })
     }
   }
+
   // getImageLocation = (file) => {
   //   EXIF.getData(file, function () {
   //     var exifData = EXIF.getAllTags(this)
