@@ -7,14 +7,6 @@ const XlsToJson = (props) => {
   const [json, setJson] = useState([])
   const { headers } = props
 
-  // const make_cols = (refstr) => {
-  //   let o = [],
-  //     C = XLSX.utils.decode_range(refstr).e.c + 1
-  //   for (var i = 0; i < C; ++i)
-  //     o[i] = { name: XLSX.utils.encode_col(i), key: i }
-  //   return o
-  // }
-
   const uploadFile = (e) => {
     let file = e.target.files[0]
 
@@ -67,8 +59,6 @@ const XlsToJson = (props) => {
           multiple={false}
           onChange={uploadFile}
         />
-        {/* <input type='submit' value='Process Triggers' onClick={uploadFile} /> */}
-        {/* <button onClick={onClickUpload}>Upload</button> */}
       </div>
 
       <div className='data-table'>
