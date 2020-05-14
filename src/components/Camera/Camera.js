@@ -48,7 +48,7 @@ export class Camera extends Component {
     const context = this.canvas.getContext('2d')
 
     context.drawImage(this.videoPlayer, 0, 0, 320, 150)
-    this.canvas.toBlob(sendFile)
+   // this.canvas.toBlob(sendFile)
   }
 
   render() {
