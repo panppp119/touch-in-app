@@ -194,7 +194,7 @@ export class CheckInForm extends Component {
           let exifData = EXIF.getAllTags(this)
 
           console.log(file)
-   //try{
+   try{
           if(!isEmpty(exifData.DateTime)) {
         
             const GPSLat = exifData.GPSLatitude || []
@@ -257,10 +257,10 @@ export class CheckInForm extends Component {
 
 
           }
-      /*  }
+        }
         catch(ex){
-          console.log('console.log ' , exifData.DateTime)
-          }*/
+          console.log('console.log : DateTime ',exifData.DateTime,  exifData)
+          }
 
           comp.setState({ images })
         })
