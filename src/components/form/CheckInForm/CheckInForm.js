@@ -10,7 +10,8 @@ import isEmpty from 'lodash.isempty';
 // import { storage } from 'config/firebaseConfig.js'
 
 import './CheckInForm.scss'
-import Camera from 'components/Camera/Camera'
+//import Camera from 'components/Camera/Camera'
+
 
 
 /*const upload_img = document.getElementById("upload");
@@ -59,8 +60,11 @@ export class CheckInForm extends Component {
   //   })
   // }
 
- /* alertSuccess(){
+  /*alertSuccess(){
     alert("บันทึกสำเร็จ")
+  }
+  alertFail(){
+    alert('การอัปโหลดล้มเหลว ข้อแนะนำ : ต้องเป็นภาพถ่ายจากโทรศัพท์มือถือ หรือ Notebook ที่เชื่อมต่อินเทอร์เน็ตเท่านั้น')
   }*/
 
   submitCheckIn = () => {
@@ -239,7 +243,7 @@ export class CheckInForm extends Component {
               datetime,
             })
 
-  
+            console.log('console.log = True : DateTime ',exifData.DateTime,  exifData)
           } 
           else 
           {
@@ -254,12 +258,14 @@ export class CheckInForm extends Component {
             })
 
       
-
+            console.log('console.log = False : DateTime ',exifData.DateTime,  exifData)
 
           }
         }
         catch(ex){
-          console.log('console.log : DateTime ',exifData.DateTime,  exifData)
+          console.log('console.log = Error : DateTime ',exifData.DateTime,  exifData)
+          alert("การอัปโหลดล้มเหลว ข้อแนะนำ : ต้องเป็นภาพถ่ายจากโทรศัพท์มือถือ หรือ Notebook ที่เชื่อมต่อินเทอร์เน็ตเท่านั้น")
+          
           }
 
           comp.setState({ images })
@@ -301,7 +307,7 @@ export class CheckInForm extends Component {
     })
   }
 
-  async setDevice(device) {
+  /*async setDevice(device) {
     const { deviceId } = device
     const stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
@@ -325,7 +331,7 @@ export class CheckInForm extends Component {
     images2.drawImage(this.videoPlayer, 0, 0, 320, 150)
     //this.canvas.toBlob(sendFile)
   }
-
+*/
   render() {
     return (
       <div className='checkin-form'>
@@ -340,7 +346,7 @@ export class CheckInForm extends Component {
         <div className='form-group'>
           <div className='form-field'>
             <label>Camera</label>
-            <GoDeviceCamera onClick={this.takePhoto} />
+            <GoDeviceCamera  /> {/* onClick={this.takePhoto} */}
           </div>
 
           <div className='form-field'>
@@ -358,7 +364,7 @@ export class CheckInForm extends Component {
             />
           </div>
         </div>
-        <div className='form-checkin'>
+     {/* <div className='form-checkin'>
         <div hidden='hidden'>
           <video
             ref={(ref) => (this.videoPlayer = ref)}
@@ -371,7 +377,7 @@ export class CheckInForm extends Component {
         <div>
           <canvas className='takePhoto' ref={(ref) => (this.images2 = ref)} />
         </div>
-      </div>
+    </div> */}
         {this.renderImages()}
 
         {/* <div className='form-checkin'>
