@@ -25,14 +25,15 @@ export const checkAuth = () => (dispatch, getState) => {
 
 export const login = () => (dispatch, getState) => {
   const googleProvider = new firebase.auth.GoogleAuthProvider()
+
   dispatch({ type: CONST.LOGIN })
 
   auth
     .signInWithPopup(googleProvider)
     .then((response) => {
-      const userInfo = response.additionalUserInfo
-      const profile = userInfo.profile
-      const credential = response.credential
+      const userInfo = response.additionalUserInfo || {}
+      const profile = userInfo.profile || {}
+      const credential = response.credential || {}
 
       const user = {
         first_name: profile.given_name,
@@ -45,10 +46,6 @@ export const login = () => (dispatch, getState) => {
         refresh_token: response.user.refreshToken,
       }
 
-      dispatch({ type: CONST.LOGIN_SUCCESS })
-
-      console.log('user', user)
-
       if (userInfo.isNewUser) {
         // dispatch(register(user))
         console.log('new user')
@@ -56,6 +53,9 @@ export const login = () => (dispatch, getState) => {
         // dispatch(signin({ email: profile.email, provider }))
         console.log('exist user')
       }
+
+      localStorage.seItem('token', credential.accessToken)
+      dispatch({ type: CONST.LOGIN_SUCCESS, response: user })
     })
     .catch((error) => {
       console.warn(error)

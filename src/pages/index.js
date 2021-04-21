@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Switch } from 'react-router'
 
 import CoreLayout from 'components/layout/CoreLayout'
@@ -11,6 +11,7 @@ import Profile from 'pages/Profile'
 import Report from 'pages/Report'
 import CheckIn from 'pages/CheckIn'
 import OperationTools from 'pages/OperationTools'
+
 
 const routes = (
   <CoreLayout>

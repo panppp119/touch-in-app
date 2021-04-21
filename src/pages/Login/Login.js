@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 
 import { login } from 'actions/auth'
 import touchLogo from 'images/touch_logo.png'
-import XlsToJson from 'components/convert/XlsToJson'
-import { userHeaders } from 'constants/headers'
+// import XlsToJson from 'components/convert/XlsToJson'
+// import { userHeaders } from 'constants/headers'
 
 import './Login.scss'
 
@@ -36,7 +36,7 @@ class Login extends React.Component {
           </button>
           {ggError && <p className='error'>{ggError.message}</p>}
 
-          <XlsToJson headers={userHeaders} />
+          {/* <XlsToJson headers={userHeaders} /> */}
         </div>
       </div>
     )
